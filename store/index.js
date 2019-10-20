@@ -5,7 +5,13 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       loadedPosts: [],
-      token: null
+      token: null,
+      items: [
+        {
+          text: 'home',
+          to: '/'
+        }
+      ]
     },
     mutations: {
       setPosts(state, posts) {
@@ -30,7 +36,7 @@ const createStore = () => {
     actions: {
       nuxtServerInit(vuexContext, context) {
         return context.app.$axios
-          .$get("news/100")
+          .$get("news/200")
           .then(data => {
             const postsArray = [];
             for (const post in data.data) {
@@ -150,6 +156,29 @@ const createStore = () => {
       isAuthenticated(state) {
         return state.token != null;
       },
+      categories: state => {
+        const categories = [];
+
+        for (const singleNews of state.loadedPosts) {
+          if (
+            !singleNews.category.name ||
+            categories.find(category => {
+              return category.text.toLowerCase() === singleNews.category.name.toLowerCase()
+            })
+          ) continue
+
+          const text = singleNews.category.name.toLowerCase()
+
+          categories.push({
+            text,
+            to: `/news/${text}/`,
+          })
+        }
+        return categories.sort().slice(0,6)
+      },
+      links: (state, getters) => {
+        return state.items.concat(getters.categories)
+      }
     }
   });
 };

@@ -8,8 +8,11 @@
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/news">All News</nuxt-link></li>
+        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" >{{ link.text }}</nuxt-link></li>
       </ul>
+      <!--<ul class="nav-list">
+        <li class="nav-item"><nuxt-link to="/news">All News</nuxt-link></li>
+      </ul>-->
     </div>
   </header>
 </div>
@@ -22,6 +25,14 @@ export default {
   name: "TheHeader",
   components: {
     TheSideNavToggle
+  },
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    },
+    links() {
+      return this.$store.getters.links
+    }
   }
 };
 </script>

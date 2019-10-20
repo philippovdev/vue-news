@@ -20,13 +20,6 @@ export default {
   components: {
     PostPreview
   },
-  /*asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null, () => {
-
-      })
-    }, 100)
-  },*/
   props: {
     isAdmin: {
       type: Boolean,

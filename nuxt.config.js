@@ -80,7 +80,7 @@ module.exports = {
   generate: {
     routes: function() {
       return axios
-        .get("http://admin.lova.news/100")
+        .get("http://admin.lova.news/200")
         .then(res => {
           const routes = [];
           for (const key in res.data) {
