@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="Basic functional is alive and ready to go">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/news.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/main-page-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Admin/AdminPostForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navigation/TheSideNavToggle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navigation/TheSidenav.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Posts/PostList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/AppButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UI/AppControlInput.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/admin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layouts/error.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/check-auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/about/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/_postId/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/auth/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/new-post/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/core-components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/date-filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1S6jBbWsczFWv8nU69CfsW39gN8" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="" />
+      <created>1570890804795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570890804795</updated>
+      <workItem from="1570890805921" duration="5050000" />
+      <workItem from="1571470232926" duration="80000" />
+      <workItem from="1571470343651" duration="43447000" />
+    </task>
+    <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
+      <created>1571565254626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571565254626</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Basic functional is alive and ready to go" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic functional is alive and ready to go" />
+  </component>
+</project>
