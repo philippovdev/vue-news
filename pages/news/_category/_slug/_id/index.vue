@@ -1,5 +1,5 @@
 <template>
-  <div class="single-post-page">
+  <div class="single-post-page" :style="{backgroundImage: 'url(' + loadedPost.image + ')'}">
     <section class="post" >
       <h1 class="post-title">{{ loadedPost.title }}</h1>
       <div class="post-details">
@@ -23,7 +23,7 @@
           loadedPost: context.payload.postData
         }
       }
-      return context.app.$axios.$get('/news/100')
+      return context.app.$axios.$get('/news/300')
         .then(data => {
           let newsId = context.params.id;
           return {
@@ -42,12 +42,15 @@
 <style scoped>
   .single-post-page {
     padding: 30px;
-    text-align: center;
     box-sizing: border-box;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 
   .post {
     width: 100%;
+    padding: 20px;
+    background-color: rgba(255,255,255,.9);
   }
 
   @media (min-width: 768px) {
@@ -58,6 +61,7 @@
   }
 
   .post-title {
+    text-align: center;
     margin: 0;
   }
 
