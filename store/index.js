@@ -1,5 +1,5 @@
-import Vuex from "vuex";
-import Cookie from "js-cookie";
+import Vuex from 'vuex'
+import Cookie from 'js-cookie'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -14,79 +14,79 @@ const createStore = () => {
       ]
     },
     mutations: {
-      setPosts(state, posts) {
-        state.loadedPosts = posts;
+      setPosts (state, posts) {
+        state.loadedPosts = posts
       },
-      addPost(state, post) {
-        state.loadedPosts.push(post);
+      addPost (state, post) {
+        state.loadedPosts.push(post)
       },
-      editPost(state, editedPost) {
+      editPost (state, editedPost) {
         const postIndex = state.loadedPosts.findIndex(
           post => post.id === editedPost.id
-        );
-        state.loadedPosts[postIndex] = editedPost;
+        )
+        state.loadedPosts[postIndex] = editedPost
       },
-      setToken(state, token) {
-        state.token = token;
+      setToken (state, token) {
+        state.token = token
       },
-      clearToken(state) {
-        state.token = null;
+      clearToken (state) {
+        state.token = null
       }
     },
     actions: {
-      nuxtServerInit(vuexContext, context) {
+      nuxtServerInit (vuexContext, context) {
         return context.app.$axios
-          .$get("news/200")
+          .$get('news/200')
           .then(data => {
-            const postsArray = [];
+            const postsArray = []
             for (const post in data.data) {
-                postsArray.push({ ...data.data[post], id: post });
+              postsArray.push({ ...data.data[post], id: post })
             }
-            vuexContext.commit("setPosts", postsArray);
+            vuexContext.commit('setPosts', postsArray)
           })
-          .catch(e => context.error(e));
+          .catch(e => context.error(e))
       },
-      addPost(vuexContext, post) {
+      addPost (vuexContext, post) {
         const createdPost = {
           ...post,
           updatedDate: new Date()
-        };
+        }
         return this.$axios
           .$post(
-            "https://keto-blog.firebaseio.com/posts.json?auth=" +
-              vuexContext.state.token,
+            'https://keto-blog.firebaseio.com/posts.json?auth=' +
+            vuexContext.state.token,
             createdPost
           )
           .then(data => {
-            vuexContext.commit("addPost", { ...createdPost, id: data.name });
+            vuexContext.commit('addPost', { ...createdPost, id: data.name })
           })
-          .catch(e => console.log(e));
+          .catch(e => console.log(e))
       },
-      editPost(vuexContext, editedPost) {
+      editPost (vuexContext, editedPost) {
         return this.$axios
           .$put(
-            "https://keto-blog.firebaseio.com/posts/" +
-              editedPost.id +
-              ".json?auth=" +
-              vuexContext.state.token,
+            'https://keto-blog.firebaseio.com/posts/' +
+            editedPost.id +
+            '.json?auth=' +
+            vuexContext.state.token,
             editedPost
           )
           .then(res => {
-            vuexContext.commit("editPost", editedPost);
+            vuexContext.commit('editPost', editedPost)
           })
-          .catch(e => console.log(e));
+          .catch(e => console.log(e))
       },
-      setPosts(vuexContext, posts) {
-        vuexContext.commit("setPosts", posts);
+      setPosts (vuexContext, posts) {
+        vuexContext.commit('setPosts', posts)
       },
-      authenticateUser(vuexContext, authData) {
+      authenticateUser (vuexContext, authData) {
         let authUrl =
-          "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=" +
-          process.env.fbAPIKey;
+          'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
+          process.env.fbAPIKey
         if (!authData.isLogin) {
           authUrl =
-            "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=" +
-            process.env.fbAPIKey;
+            'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' +
+            process.env.fbAPIKey
         }
         return this.$axios
           .$post(authUrl, {
@@ -95,69 +95,69 @@ const createStore = () => {
             returnSecureToken: true
           })
           .then(result => {
-            vuexContext.commit("setToken", result.idToken);
-            localStorage.setItem("token", result.idToken);
+            vuexContext.commit('setToken', result.idToken)
+            localStorage.setItem('token', result.idToken)
             localStorage.setItem(
-              "tokenExpiration",
+              'tokenExpiration',
               new Date().getTime() + Number.parseInt(result.expiresIn) * 1000
-            );
-            Cookie.set("jwt", result.idToken);
+            )
+            Cookie.set('jwt', result.idToken)
             Cookie.set(
-              "expirationDate",
+              'expirationDate',
               new Date().getTime() + Number.parseInt(result.expiresIn) * 1000
-            );
-            return this.$axios.$post('http://localhost:3000/api/track-data', {data: 'Authenticated!'})
+            )
+            return this.$axios.$post('http://localhost:3000/api/track-data', { data: 'Authenticated!' })
           })
-          .catch(e => console.log(e));
+          .catch(e => console.log(e))
       },
-      initAuth(vuexContext, req) {
-        let token;
-        let expirationDate;
+      initAuth (vuexContext, req) {
+        let token
+        let expirationDate
         if (req) {
           if (!req.headers.cookie) {
-            return;
+            return
           }
           const jwtCookie = req.headers.cookie
-            .split(";")
-            .find(c => c.trim().startsWith("jwt="));
+            .split(';')
+            .find(c => c.trim().startsWith('jwt='))
           if (!jwtCookie) {
-            return;
+            return
           }
-          token = jwtCookie.split("=")[1];
+          token = jwtCookie.split('=')[1]
           expirationDate = req.headers.cookie
-            .split(";")
-            .find(c => c.trim().startsWith("expirationDate="))
-            .split("=")[1];
+            .split(';')
+            .find(c => c.trim().startsWith('expirationDate='))
+            .split('=')[1]
         } else if (process.client) {
-          token = localStorage.getItem("token");
-          expirationDate = localStorage.getItem("tokenExpiration");
+          token = localStorage.getItem('token')
+          expirationDate = localStorage.getItem('tokenExpiration')
         }
         if (new Date().getTime() > +expirationDate || !token) {
-          console.log("No token or invalid token");
-          vuexContext.dispatch("logout");
-          return;
+          console.log('No token or invalid token')
+          vuexContext.dispatch('logout')
+          return
         }
-        vuexContext.commit("setToken", token);
+        vuexContext.commit('setToken', token)
       },
-      logout(vuexContext) {
-        vuexContext.commit("clearToken");
-        Cookie.remove("jwt");
-        Cookie.remove("expirationDate");
+      logout (vuexContext) {
+        vuexContext.commit('clearToken')
+        Cookie.remove('jwt')
+        Cookie.remove('expirationDate')
         if (process.client) {
-          localStorage.removeItem("token");
-          localStorage.removeItem("tokenExpiration");
+          localStorage.removeItem('token')
+          localStorage.removeItem('tokenExpiration')
         }
       }
     },
     getters: {
-      loadedPosts(state) {
-        return state.loadedPosts;
+      loadedPosts (state) {
+        return state.loadedPosts
       },
-      isAuthenticated(state) {
-        return state.token != null;
+      isAuthenticated (state) {
+        return state.token != null
       },
       categories: state => {
-        const categories = [];
+        const categories = []
 
         for (const singleNews of state.loadedPosts) {
           if (
@@ -174,13 +174,13 @@ const createStore = () => {
             to: `/news/${text}/`,
           })
         }
-        return categories.sort().slice(0,6)
+        return categories.sort().slice(0, 6)
       },
       links: (state, getters) => {
         return state.items.concat(getters.categories)
       }
     }
-  });
-};
+  })
+}
 
 export default createStore;

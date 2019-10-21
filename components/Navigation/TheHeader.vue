@@ -3,12 +3,12 @@
   <header class="the-header">
     <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
     <div class="logo">
-      <nuxt-link to="/">WD BLOG</nuxt-link>
+      <nuxt-link to="/"><b>LOVA</b> News</nuxt-link>
     </div>
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" >{{ link.text }}</nuxt-link></li>
+        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" exact-active-class="active">{{ link.text }}</nuxt-link></li>
       </ul>
       <!--<ul class="nav-list">
         <li class="nav-item"><nuxt-link to="/news">All News</nuxt-link></li>
@@ -50,7 +50,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: #45a763;
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;
@@ -64,6 +64,11 @@ export default {
 .logo a {
   text-decoration: none;
   color: white;
+}
+.logo img {
+  width: 100px;
+  display: flex;
+  align-self: center
 }
 
 .spacer {
@@ -98,7 +103,9 @@ export default {
 
 .nav-item a:hover,
 .nav-item a:active,
-.nav-item a.nuxt-link-active {
-  color: red;
+.nav-item a.active {
+  color: #ffbfbf;
 }
+
+
 </style>

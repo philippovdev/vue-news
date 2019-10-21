@@ -31,7 +31,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#fa923f", height: "4px", duration: 5000 },
+  loading: { color: "#fff", height: "4px", duration: 2000 },
   loadingIndicator: {
     name: "circle",
     color: "#fa923f"
@@ -73,9 +73,11 @@ module.exports = {
     name: "fade",
     mode: "out-in"
   },
-  // router: {
-  //   middleware: 'log'
-  // }
+  router: {
+    linkActiveClass: 'nuxt-active-link',
+    linkExactActiveClass: 'nuxt-exact-active-link',
+    // middleware: 'log'
+  },
   serverMiddleware: [bodyParser.json(), "~/api"],
   generate: {
     routes: function() {
