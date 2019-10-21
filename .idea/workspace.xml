@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/lova-home-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +73,7 @@
       <workItem from="1570890805921" duration="5050000" />
       <workItem from="1571470232926" duration="80000" />
       <workItem from="1571470343651" duration="50203000" />
-      <workItem from="1571579244497" duration="17625000" />
+      <workItem from="1571579244497" duration="18469000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -108,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571595035807</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed bg for main page">
+      <created>1571632390158</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571632390158</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +133,7 @@
     <MESSAGE value="Basic functional is alive and ready to go" />
     <MESSAGE value="Fixed bug of wrong routing construction for categories" />
     <MESSAGE value="Added background-image to post" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added background-image to post" />
+    <MESSAGE value="Changed bg for main page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed bg for main page" />
   </component>
 </project>

@@ -14,11 +14,6 @@ export default {
       return this.$store.getters.loadedPosts
     }
   }
-  // data() {
-  //   return {
-  //     loadedPosts: []
-  //   };
-  // },
 };
 </script>
 
@@ -37,9 +32,9 @@ export default {
 .intro h1 {
   position: absolute;
   top: 50%;
-  left: 3%;
-  transform: translateY(-70%);
-  width: 100%;
+  transform: translateY(-50%);
+  width: 90%;
+  margin: 0 5%;
   color: #fff;
   background-color: rgba(150,155,155,.6);
   padding: 10px 30px;
@@ -51,6 +46,7 @@ export default {
   .intro h1 {
     font-size: 3rem;
     width: 50%;
+    margin: 0 10%;
   }
 }
 
