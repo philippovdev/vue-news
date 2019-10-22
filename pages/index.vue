@@ -10,19 +10,40 @@
 
 <script>
   export default {
-    fetch ({ store, params }) {
+    /*fetch ({ store, params }) {
       return store.app.$axios.get(store.getters.nextPage)
         .then((res) => {
           store.commit('setNext', res.data['next_page_url']);
           store.commit('setPosts', res.data['data']);
         })
-    },
+    },*/
     computed: {
       loadedPosts() {
         return this.$store.getters.loadedPosts
-      }
+      },
     },
     methods: {
+      loadNewPosts() {
+        this.$axios.get(this.$store.getters.nextPage)
+          .then(res => {
+              this.$store.commit('setPosts', [...this.$store.getters.loadedPosts, ...res.data.data])
+              this.$store.commit('setNext', res.data['next_page_url'])
+          });
+      }
+    },
+    // asyncData(context) {
+    //   return {
+    //     async loadNewPosts() {
+    //       await context.$axios.get(context.store.getters.nextPage)
+    //         .then(res => {
+    //             context.store.commit('setPosts', [...context.store.state.loadedPosts, ...res.data['data']])
+    //             context.store.commit('setNext', res.data['next_page_url'])
+    //         })
+    //         .catch(e => context.error(new Error()))
+    //     }
+    //   }
+    // },
+    /* methods: {
       async loadNewPosts({ store, params })  {
           return await this.$store.app.$axios.get(this.$store.getters.nextPage)
             .then((res) => {
@@ -30,7 +51,7 @@
               this.$store.commit('setPosts', res.data['data']);
             })
         },
-      }
+      }*/
   }
 </script>
 

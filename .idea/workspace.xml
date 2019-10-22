@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
@@ -41,13 +40,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Andrew\Desktop\news\assets\images" />
       <recent name="C:\Users\Andrew\Desktop\news\static" />
       <recent name="C:\Users\Andrew\Desktop\news" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -76,7 +75,8 @@
       <workItem from="1571470232926" duration="80000" />
       <workItem from="1571470343651" duration="50203000" />
       <workItem from="1571579244497" duration="18605000" />
-      <workItem from="1571640788382" duration="11071000" />
+      <workItem from="1571640788382" duration="14202000" />
+      <workItem from="1571767809198" duration="5970000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -120,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571633193832</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added more posts upload">
+      <created>1571720285983</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571720285983</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +152,7 @@
     <MESSAGE value="Added background-image to post" />
     <MESSAGE value="Changed bg for main page" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="Added more posts upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more posts upload" />
   </component>
 </project>

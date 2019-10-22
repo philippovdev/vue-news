@@ -7,6 +7,7 @@ const createStore = () => {
       nextPage: null,
       postsByCategory: [],
       loadedPosts: [],
+      categories: [],
       token: null,
       items: [
         {
@@ -17,17 +18,14 @@ const createStore = () => {
     },
     mutations: {
       setPosts (state, posts) {
-        if (state.loadedPosts) {
-          state.loadedPosts = [...state.loadedPosts, posts]
-        }
         state.loadedPosts = posts
       },
       setNext (state, nextPage) {
         state.nextPage = nextPage
       },
-      setPostsByCategory (state, posts) {
+      /*setPostsByCategory (state, posts) {
         state.postsByCategory = posts
-      },
+      },*/
       /*addPost (state, post) {
         state.loadedPosts.push(post)
       },
@@ -53,7 +51,7 @@ const createStore = () => {
             for (const post in data.data) {
               postsArray.push({ ...data.data[post], id: post })
             }
-            vuexContext.commit('setPosts', postsArray)
+            vuexContext.commit('setPosts', postsArray);
             if (data['next_page_url']) {
               vuexContext.commit('setNext', data['next_page_url'])
             }
@@ -75,8 +73,8 @@ const createStore = () => {
             vuexContext.commit('addPost', { ...createdPost, id: data.name })
           })
           .catch(e => console.log(e))
-      },*/
-      /*editPost (vuexContext, editedPost) {
+      },
+      editPost (vuexContext, editedPost) {
         return this.$axios
           .$put(
             'https://keto-blog.firebaseio.com/posts/' +
@@ -164,9 +162,9 @@ const createStore = () => {
       }*/
     },
     getters: {
-      postsByCategory () {
+      /*postsByCategory () {
         return state.postsByCategory
-      },
+      },*/
       loadedPosts (state) {
         return state.loadedPosts
       },
