@@ -4,6 +4,8 @@ import Cookie from 'js-cookie'
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      nextPage: null,
+      postsByCategory: [],
       loadedPosts: [],
       token: null,
       items: [
@@ -15,9 +17,18 @@ const createStore = () => {
     },
     mutations: {
       setPosts (state, posts) {
+        if (state.loadedPosts) {
+          state.loadedPosts = [...state.loadedPosts, posts]
+        }
         state.loadedPosts = posts
       },
-      addPost (state, post) {
+      setNext (state, nextPage) {
+        state.nextPage = nextPage
+      },
+      setPostsByCategory (state, posts) {
+        state.postsByCategory = posts
+      },
+      /*addPost (state, post) {
         state.loadedPosts.push(post)
       },
       editPost (state, editedPost) {
@@ -31,22 +42,25 @@ const createStore = () => {
       },
       clearToken (state) {
         state.token = null
-      }
+      }*/
     },
     actions: {
       nuxtServerInit (vuexContext, context) {
         return context.app.$axios
-          .$get('news/200')
+          .$get(this.nextPage)
           .then(data => {
             const postsArray = []
             for (const post in data.data) {
               postsArray.push({ ...data.data[post], id: post })
             }
             vuexContext.commit('setPosts', postsArray)
+            if (data['next_page_url']) {
+              vuexContext.commit('setNext', data['next_page_url'])
+            }
           })
           .catch(e => context.error(e))
       },
-      addPost (vuexContext, post) {
+      /*addPost (vuexContext, post) {
         const createdPost = {
           ...post,
           updatedDate: new Date()
@@ -61,8 +75,8 @@ const createStore = () => {
             vuexContext.commit('addPost', { ...createdPost, id: data.name })
           })
           .catch(e => console.log(e))
-      },
-      editPost (vuexContext, editedPost) {
+      },*/
+      /*editPost (vuexContext, editedPost) {
         return this.$axios
           .$put(
             'https://keto-blog.firebaseio.com/posts/' +
@@ -75,11 +89,11 @@ const createStore = () => {
             vuexContext.commit('editPost', editedPost)
           })
           .catch(e => console.log(e))
-      },
+      },*/
       setPosts (vuexContext, posts) {
         vuexContext.commit('setPosts', posts)
       },
-      authenticateUser (vuexContext, authData) {
+      /*authenticateUser (vuexContext, authData) {
         let authUrl =
           'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
           process.env.fbAPIKey
@@ -147,11 +161,17 @@ const createStore = () => {
           localStorage.removeItem('token')
           localStorage.removeItem('tokenExpiration')
         }
-      }
+      }*/
     },
     getters: {
+      postsByCategory () {
+        return state.postsByCategory
+      },
       loadedPosts (state) {
         return state.loadedPosts
+      },
+      nextPage (state) {
+        return state.nextPage
       },
       isAuthenticated (state) {
         return state.token != null

@@ -52,7 +52,7 @@ module.exports = {
   */
   modules: ["@nuxtjs/axios"],
   axios: {
-    baseURL: process.env.BASE_URL || "http://admin.lova.news/",
+    baseURL: process.env.BASE_URL || "http://admin.lova.news/news/12",
     credentials: false
   },
 
