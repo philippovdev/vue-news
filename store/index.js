@@ -20,6 +20,9 @@ const createStore = () => {
       setPosts (state, posts) {
         state.loadedPosts = posts
       },
+      setCategories (state, categories) {
+        state.categories = categories
+      },
       setNext (state, nextPage) {
         state.nextPage = nextPage
       },
@@ -91,6 +94,9 @@ const createStore = () => {
       setPosts (vuexContext, posts) {
         vuexContext.commit('setPosts', posts)
       },
+      setCategories (vuexContext, categories) {
+        vuexContext.commit('setCategories', categories);
+      }
       /*authenticateUser (vuexContext, authData) {
         let authUrl =
           'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
@@ -165,6 +171,9 @@ const createStore = () => {
       /*postsByCategory () {
         return state.postsByCategory
       },*/
+      getCategories (state) {
+        return state.categories
+      },
       loadedPosts (state) {
         return state.loadedPosts
       },
@@ -174,18 +183,18 @@ const createStore = () => {
       isAuthenticated (state) {
         return state.token != null
       },
-      categories: state => {
+      categories (state) {
         const categories = []
 
-        for (const singleNews of state.loadedPosts) {
+        for (const singleCategory of state.categories) {
           if (
-            !singleNews.category.name ||
+            !singleCategory.slug ||
             categories.find(category => {
-              return category.text.toLowerCase() === singleNews.category.name.toLowerCase()
+              return category.text.toLowerCase() === singleCategory.slug.toLowerCase()
             })
           ) continue
 
-          const text = singleNews.category.name.toLowerCase()
+          const text = singleCategory.slug.toLowerCase()
 
           categories.push({
             text,

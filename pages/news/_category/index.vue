@@ -9,7 +9,20 @@
   export default {
     name: 'index',
     components: { PostPreview, PostList },
-    computed: {
+
+    asyncData(context) {
+        return {
+          async loadNewPosts() {
+            await context.$axios.get(context.store.getters.nextPage)
+              .then(res => {
+                  context.store.commit('setPosts', [...context.store.state.loadedPosts, ...res.data['data']])
+                  context.store.commit('setNext', res.data['next_page_url'])
+              })
+              .catch(e => context.error(new Error()))
+          }
+        }
+      },
+    /*computed: {
       loadedPosts() {
         return this.$store.getters.loadedPosts;
       },
@@ -23,7 +36,7 @@
         }
         return postsByCategory;
       }
-    }
+    }*/
   }
 </script>
 
