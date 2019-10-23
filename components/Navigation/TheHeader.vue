@@ -27,9 +27,6 @@ export default {
     TheSideNavToggle
   },
   computed: {
-    loadedPosts() {
-      return this.$store.getters.loadedPosts
-    },
     links() {
       return this.$store.getters.links
     }

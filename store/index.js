@@ -4,7 +4,10 @@ import Cookie from 'js-cookie'
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      nextPage: null,
+      postsByCategory: [],
       loadedPosts: [],
+      categories: [],
       token: null,
       items: [
         {
@@ -17,7 +20,16 @@ const createStore = () => {
       setPosts (state, posts) {
         state.loadedPosts = posts
       },
-      addPost (state, post) {
+      setCategories (state, categories) {
+        state.categories = categories
+      },
+      setNext (state, nextPage) {
+        state.nextPage = nextPage
+      },
+      /*setPostsByCategory (state, posts) {
+        state.postsByCategory = posts
+      },*/
+      /*addPost (state, post) {
         state.loadedPosts.push(post)
       },
       editPost (state, editedPost) {
@@ -31,22 +43,25 @@ const createStore = () => {
       },
       clearToken (state) {
         state.token = null
-      }
+      }*/
     },
     actions: {
       nuxtServerInit (vuexContext, context) {
         return context.app.$axios
-          .$get('news/200')
+          .$get(this.nextPage)
           .then(data => {
             const postsArray = []
             for (const post in data.data) {
               postsArray.push({ ...data.data[post], id: post })
             }
-            vuexContext.commit('setPosts', postsArray)
+            vuexContext.commit('setPosts', postsArray);
+            if (data['next_page_url']) {
+              vuexContext.commit('setNext', data['next_page_url'])
+            }
           })
           .catch(e => context.error(e))
       },
-      addPost (vuexContext, post) {
+      /*addPost (vuexContext, post) {
         const createdPost = {
           ...post,
           updatedDate: new Date()
@@ -75,11 +90,14 @@ const createStore = () => {
             vuexContext.commit('editPost', editedPost)
           })
           .catch(e => console.log(e))
-      },
+      },*/
       setPosts (vuexContext, posts) {
         vuexContext.commit('setPosts', posts)
       },
-      authenticateUser (vuexContext, authData) {
+      setCategories (vuexContext, categories) {
+        vuexContext.commit('setCategories', categories);
+      }
+      /*authenticateUser (vuexContext, authData) {
         let authUrl =
           'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
           process.env.fbAPIKey
@@ -147,27 +165,36 @@ const createStore = () => {
           localStorage.removeItem('token')
           localStorage.removeItem('tokenExpiration')
         }
-      }
+      }*/
     },
     getters: {
+      /*postsByCategory () {
+        return state.postsByCategory
+      },*/
+      getCategories (state) {
+        return state.categories
+      },
       loadedPosts (state) {
         return state.loadedPosts
+      },
+      nextPage (state) {
+        return state.nextPage
       },
       isAuthenticated (state) {
         return state.token != null
       },
-      categories: state => {
+      categories (state) {
         const categories = []
 
-        for (const singleNews of state.loadedPosts) {
+        for (const singleCategory of state.categories) {
           if (
-            !singleNews.category.name ||
+            !singleCategory.slug ||
             categories.find(category => {
-              return category.text.toLowerCase() === singleNews.category.name.toLowerCase()
+              return category.text.toLowerCase() === singleCategory.slug.toLowerCase()
             })
           ) continue
 
-          const text = singleNews.category.name.toLowerCase()
+          const text = singleCategory.slug.toLowerCase()
 
           categories.push({
             text,
