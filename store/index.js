@@ -26,6 +26,9 @@ const createStore = () => {
       setNext (state, nextPage) {
         state.nextPage = nextPage
       },
+      setPostsByCategory (state, postsByCategory) {
+        state.postsByCategory = postsByCategory
+      }
       /*setPostsByCategory (state, posts) {
         state.postsByCategory = posts
       },*/
@@ -96,6 +99,9 @@ const createStore = () => {
       },
       setCategories (vuexContext, categories) {
         vuexContext.commit('setCategories', categories);
+      },
+      setPostsByCategory (vuexContext, postsByCategory) {
+        vuexContext.commit('setPostsByCategory', postsByCategory)
       }
       /*authenticateUser (vuexContext, authData) {
         let authUrl =
@@ -182,6 +188,9 @@ const createStore = () => {
       },
       isAuthenticated (state) {
         return state.token != null
+      },
+      postsByCategory (state) {
+        return state.postsByCategory
       },
       categories (state) {
         const categories = []
