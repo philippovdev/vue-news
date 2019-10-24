@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
@@ -78,7 +78,7 @@
       <workItem from="1571470343651" duration="50203000" />
       <workItem from="1571579244497" duration="18605000" />
       <workItem from="1571640788382" duration="14202000" />
-      <workItem from="1571767809198" duration="12088000" />
+      <workItem from="1571767809198" duration="17048000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -136,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571773860252</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added dynamic menu links from categories">
+      <created>1571813692792</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571813692792</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +170,7 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="Added more posts upload" />
     <MESSAGE value="More posts load button with saving posts in vuex store" />
-    <option name="LAST_COMMIT_MESSAGE" value="More posts load button with saving posts in vuex store" />
+    <MESSAGE value="Added dynamic menu links from categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dynamic menu links from categories" />
   </component>
 </project>

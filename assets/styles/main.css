@@ -4,3 +4,16 @@
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.btn {
+  padding: 20px 40px;
+  background-color: #efc14e;
+  color: #fff;
+  text-align: center;
+  border: 4px;
+  display: flex;
+  justify-self: center;
+  margin: 0 auto 50px auto;
+  font-size: 2rem;
+  align-content: center;
+}
