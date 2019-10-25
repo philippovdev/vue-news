@@ -12,15 +12,27 @@
     name: 'index',
     components: { PostList },
     async asyncData(context) {
-      let category = context.route.params.category;
-      let getInitialPosts = await context.app.$axios('http://admin.lova.news/news/12/' + category)
+      let category = await context.route.params.category;
+      let getInitialPosts = await context.app.$axios('http://admin.lova.news/news/12/' + category);
+      let categories = await context.app.$axios('http://admin.lova.news/categories')
+      context.store.commit('setPostsByCategory', []);
+      context.store.commit('setPostsByCategory', getInitialPosts.data.data);
+      context.store.commit('setNextCategoryPage', getInitialPosts.data['next_page_url'])
+      context.store.commit('setCategories', categories.data)
       return {
-        categoryPosts: getInitialPosts.data.data
+        categoryPosts: context.store.getters.getPostsByCategory,
+
       }
     },
     methods: {
       loadNewPosts() {
-
+        this.$axios.get(this.$store.getters.getNextCategoryPage)
+          .then(res => {
+            console.log(res.data);
+            this.$store.commit('setPostsByCategory', [...this.$store.getters.getPostsByCategory, ...res.data.data])
+            this.$store.commit('setNextCategoryPage', res.data['next_page_url']);
+            this.categoryPosts = this.$store.getters.getPostsByCategory;
+          });
       }
     }
   }

@@ -5,8 +5,10 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       nextPage: null,
+      categoryNextPage: null,
       postsByCategory: [],
       loadedPosts: [],
+      post: null,
       categories: [],
       token: null,
       items: [
@@ -28,10 +30,13 @@ const createStore = () => {
       },
       setPostsByCategory (state, postsByCategory) {
         state.postsByCategory = postsByCategory
+      },
+      setNextCategoryPage (state, nextPage) {
+        state.categoryNextPage = nextPage
+      },
+      setSinglePost (state, post) {
+        state.post = post
       }
-      /*setPostsByCategory (state, posts) {
-        state.postsByCategory = posts
-      },*/
       /*addPost (state, post) {
         state.loadedPosts.push(post)
       },
@@ -102,6 +107,12 @@ const createStore = () => {
       },
       setPostsByCategory (vuexContext, postsByCategory) {
         vuexContext.commit('setPostsByCategory', postsByCategory)
+      },
+      setNextCategoryPage (vuexContext, nextPage) {
+        vuexContext.commit('setNextCategoryPage', nextPage)
+      },
+      setSinglePost (vuexContext, post) {
+        vuexContext.commit('setSinglePost', post)
       }
       /*authenticateUser (vuexContext, authData) {
         let authUrl =
@@ -174,9 +185,6 @@ const createStore = () => {
       }*/
     },
     getters: {
-      /*postsByCategory () {
-        return state.postsByCategory
-      },*/
       getCategories (state) {
         return state.categories
       },
@@ -186,11 +194,17 @@ const createStore = () => {
       nextPage (state) {
         return state.nextPage
       },
+      getNextCategoryPage (state) {
+        return state.categoryNextPage
+      },
       isAuthenticated (state) {
         return state.token != null
       },
-      postsByCategory (state) {
+      getPostsByCategory (state) {
         return state.postsByCategory
+      },
+      getSinglePost (state) {
+        return state.post
       },
       categories (state) {
         const categories = []

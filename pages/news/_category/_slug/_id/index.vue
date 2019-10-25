@@ -17,20 +17,22 @@
 
 <script>
   export default {
-    asyncData (context) {
-      if (context.payload) {
+    async asyncData (context) {
+      /*if (context.payload) {
+
         return {
           loadedPost: context.payload.postData
         }
-      }
-      return context.app.$axios.$get('/news/300')
-        .then(data => {
-          let newsId = context.params.id;
-          return {
-            loadedPost: data.data[newsId]
-          }
-        })
-        .catch(e => context.error(e))
+      }*/
+      let postId = await context.params.id;
+      let categories = await context.app.$axios('http://admin.lova.news/categories');
+      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)
+      context.store.commit('setCategories', categories.data);
+      context.store.commit('setSinglePost', loadedPost);
+      console.log(context.store.getters.getSinglePost)
+        return {
+          loadedPost: context.store.getters.getSinglePost
+        }
     },
     head: {
       title: 'A Blog Post'
