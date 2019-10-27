@@ -18,12 +18,11 @@
 <script>
   export default {
     async asyncData (context) {
-      /*if (context.payload) {
-
+      if (context.payload) {
         return {
-          loadedPost: context.payload.postData
+          loadedPost: context.payload
         }
-      }*/
+      }
       let postId = await context.params.id;
       let categories = await context.app.$axios('http://admin.lova.news/categories');
       let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)

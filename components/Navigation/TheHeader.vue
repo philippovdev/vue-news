@@ -8,11 +8,8 @@
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" exact-active-class="active">{{ link.text }}</nuxt-link></li>
+        <li v-for="link in links" class="nav-item" ><nuxt-link :to="link.to">{{ link.text }}</nuxt-link></li>
       </ul>
-      <!--<ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/news">All News</nuxt-link></li>
-      </ul>-->
     </div>
   </header>
 </div>
@@ -100,7 +97,7 @@ export default {
 
 .nav-item a:hover,
 .nav-item a:active,
-.nav-item a.active {
+.nav-item a.nuxt-exact-active-link{
   color: #ffbfbf;
 }
 
