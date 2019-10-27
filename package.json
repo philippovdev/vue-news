@@ -2,7 +2,7 @@
   "name": "nuxt-course",
   "version": "1.0.0",
   "description": "Nuxt.js course for Udemy",
-  "author": "Maximilian Schwarzmüller",
+  "author": "Andrew",
   "private": true,
   "scripts": {
     "dev": "nuxt --port 5000",

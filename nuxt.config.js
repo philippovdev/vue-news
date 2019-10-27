@@ -74,8 +74,8 @@ module.exports = {
     mode: "out-in"
   },
   router: {
-    linkActiveClass: 'nuxt-active-link',
-    linkExactActiveClass: 'nuxt-exact-active-link',
+    // linkActiveClass: 'nuxt-active-link',
+    // linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
   },
   serverMiddleware: [bodyParser.json(), "~/api"],
