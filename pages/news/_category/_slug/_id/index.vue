@@ -23,15 +23,17 @@
       }
       let postId = await context.params.id;
       let categories = await context.app.$axios('http://admin.lova.news/categories');
-      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)
+      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
         return {
           loadedPost: context.store.getters.getSinglePost
         }
     },
-    head: {
-      title: 'A Blog Post'
+    head () {
+      return {
+        title: this.loadedPost.title,
+      }
     }
   }
 </script>

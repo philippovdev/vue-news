@@ -1,29 +1,31 @@
-const pkg = require("./package");
-const bodyParser = require("body-parser");
-const axios = require("axios");
+const pkg = require('./package')
+const bodyParser = require('body-parser')
+const axios = require('axios')
+
+const postcssCustomMedia = require('postcss-custom-media');
 
 module.exports = {
-  mode: "universal",
+  mode: 'universal',
 
   /*
   ** Headers of the page
   */
   head: {
-    title: "WD Blog",
+    title: 'WD Blog',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: "description",
-        name: "description",
-        content: "My cool Web Development Blog"
+        hid: 'description',
+        name: 'description',
+        content: 'My cool Web Development Blog'
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Open+Sans"
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Open+Sans'
       }
     ]
   },
@@ -31,28 +33,28 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#fff", height: "4px", duration: 2000 },
+  loading: { color: '#fff', height: '4px', duration: 2000 },
   loadingIndicator: {
-    name: "circle",
-    color: "#fa923f"
+    name: 'circle',
+    color: '#fa923f'
   },
 
   /*
   ** Global CSS
   */
-  css: ["~assets/styles/main.css"],
+  css: ['~assets/styles/main.css'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ["~plugins/core-components.js", "~plugins/date-filter.js"],
+  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js'],
 
   /*
   ** Nuxt.js modules
   */
-  modules: ["@nuxtjs/axios"],
+  modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.BASE_URL || "http://admin.lova.news/news/12",
+    baseURL: process.env.BASE_URL || 'http://admin.lova.news/news/12',
     credentials: false
   },
 
@@ -60,39 +62,85 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {},
+        'cssnano': { preset: 'default' },
+        'postcss-preset-env': {
+          browsers: [
+            'last 2 versions',
+            'ie >= 11',
+          ],
+          stage: 0,
+        },
+        'postcss-custom-media': {
+          extensions: {
+            '--viewport-xs-min': '(min-width: 0)',
+            '--viewport-xs-max': '(max-width: 575px)',
+            /* Small medium screen / phablet, large phones */
+            '--viewport-ms-min': '(min-width: 576px)',
+            '--viewport-ms-max': '(max-width: 767px)',
+            /* Small screen / tablet */
+            '--viewport-sm-min': '(min-width: 768px)',
+            '--viewport-sm-max': '(max-width: 991px)',
+            /* Medium screen / desktop */
+            '--viewport-md-min': '(min-width: 992px)',
+            '--viewport-md-max': '(max-width: 1199px)',
+            /* Large screen / wide desktop */
+            '--viewport-lg-min': '(min-width: 1200px)',
+            '--viewport-lg-max': '(max-width: 1399px)',
+            /* X Large screen / X wide desktop */
+            '--viewport-xl-min': '(min-width: 1400px)',
+          },
+        },
+      },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+          grid: true
+        },
+      }
+    },
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {}
+    extend (config, ctx) {
+    }
   },
   env: {
-    baseUrl: process.env.BASE_URL || "http://admin.lova.news/",
-    fbAPIKey: "AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY"
+    baseUrl: process.env.BASE_URL || 'http://admin.lova.news/',
+    fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
   },
   transition: {
-    name: "fade",
-    mode: "out-in"
+    name: 'fade',
+    mode: 'out-in'
   },
   router: {
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
   },
-  serverMiddleware: [bodyParser.json(), "~/api"],
+  serverMiddleware: [bodyParser.json(), '~/api'],
   generate: {
-    routes: function() {
+    routes: function () {
       return axios
-        .get("http://admin.lova.news/200")
+        .get('http://admin.lova.news/200')
         .then(res => {
-          const routes = [];
+          const routes = []
           for (const key in res.data) {
             routes.push({
               route: `/news/${key.category.name}/${key.slug}/${key.id}`,
-              payload: {postData: res.data[key]}
-            });
+              payload: { postData: res.data[key] }
+            })
           }
-          return routes;
-        });
+          return routes
+        })
     }
   }
-};
+}

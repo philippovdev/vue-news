@@ -42,7 +42,7 @@
     background-image: url("~/assets/images/lova-home-background.jpg");
     background-position: center;
     background-size: cover;
-    filter: sepia(1);
+    filter: grayscale(.3);
   }
 
   .intro h1 {

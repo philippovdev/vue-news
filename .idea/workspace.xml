@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/styles/_animations/_animations.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_base/_grid.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_elements/_btn.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_single-post/_layout.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_typography/_typography.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +48,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="PostCSS File" />
       </list>
     </option>
   </component>
@@ -49,6 +60,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="PostCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -135,7 +147,7 @@
       <workItem from="1571977606603" duration="7485000" />
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
-      <workItem from="1572284549232" duration="2597000" />
+      <workItem from="1572284549232" duration="8598000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -221,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572285554713</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed wrong behaviour of html symbols in titles and main text">
+      <created>1572287190814</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572287190814</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +271,7 @@
     <MESSAGE value="Created separated drawer for categories pages" />
     <MESSAGE value="Categories upload and single post load fixed" />
     <MESSAGE value="Fixed problem with wrong posts id's on initial page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed problem with wrong posts id's on initial page" />
+    <MESSAGE value="Fixed wrong behaviour of html symbols in titles and main text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong behaviour of html symbols in titles and main text" />
   </component>
 </project>
