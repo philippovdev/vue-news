@@ -44,7 +44,8 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #45a763;
+  background-color: #fff;
+  box-shadow: 2px 0 5px #7f828b;
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;
@@ -57,7 +58,7 @@ export default {
 
 .logo a {
   text-decoration: none;
-  color: white;
+  color: #47494e;
 }
 .logo img {
   width: 100px;
@@ -75,7 +76,9 @@ export default {
 
 @media (min-width: 768px) {
   .navigation-items {
-    display: block;
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 }
 
@@ -92,13 +95,13 @@ export default {
 
 .nav-item a {
   text-decoration: none;
-  color: white;
+  color: #47494e;
 }
 
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-exact-active-link{
-  color: #ffbfbf;
+  color: #25272c;
 }
 
 

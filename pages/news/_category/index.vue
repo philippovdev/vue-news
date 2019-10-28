@@ -28,7 +28,6 @@
       loadNewPosts() {
         this.$axios.get(this.$store.getters.getNextCategoryPage)
           .then(res => {
-            console.log(res.data);
             this.$store.commit('setPostsByCategory', [...this.$store.getters.getPostsByCategory, ...res.data.data])
             this.$store.commit('setNextCategoryPage', res.data['next_page_url']);
             this.categoryPosts = this.$store.getters.getPostsByCategory;

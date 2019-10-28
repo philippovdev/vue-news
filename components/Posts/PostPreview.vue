@@ -5,7 +5,7 @@
           class="post-thumbnail"
           :style="{backgroundImage: 'url(' + image + ')'}"></div>
         <div class="post-content">
-          <h1>{{ title }}</h1>
+          <h1 v-html="title"></h1>
           <div v-html="description"></div>
         </div>
       </article>
@@ -17,7 +17,7 @@
     name: 'PostPreview',
     props: {
       id: {
-        type: String,
+        type: Number,
         required: true
       },
       // isAdmin: {
