@@ -27,7 +27,7 @@
     asyncData (context) { // Getting data for nav links
       return context.$axios.get('http://admin.lova.news/categories')
         .then((res) => {
-          context.store.commit('setCategories', [...res.data])
+          context.store.commit('setCategories', res.data)
         })
     }
   }

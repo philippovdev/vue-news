@@ -58,9 +58,9 @@ const createStore = () => {
         return context.app.$axios
           .$get(this.nextPage)
           .then(data => {
-            const postsArray = []
+            const postsArray = [];
             for (const post in data.data) {
-              postsArray.push({ ...data.data[post], id: post })
+              postsArray.push({ ...data.data[post], id: data.data[post]['id'] })
             }
             vuexContext.commit('setPosts', postsArray);
             if (data['next_page_url']) {
