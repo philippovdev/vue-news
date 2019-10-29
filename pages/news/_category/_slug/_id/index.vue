@@ -75,6 +75,10 @@
     flex-direction: column;
   }
 
+  .post-content {
+    text-align: left;
+  }
+
   @media (min-width: 768px) {
     .post-details {
       flex-direction: row;

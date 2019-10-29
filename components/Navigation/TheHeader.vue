@@ -8,7 +8,7 @@
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li v-for="link in links" class="nav-item" ><nuxt-link :to="link.to">{{ link.text }}</nuxt-link></li>
+        <li v-for="link in links" class="nav-item" ><nuxt-link :to="link.to">{{ link.text | firstUppercase }}</nuxt-link></li>
       </ul>
     </div>
   </header>
