@@ -1,16 +1,14 @@
 <template>
   <div class="single-post-page" :style="{backgroundImage: 'url(' + loadedPost.image + ')'}">
     <section class="post" >
-      <h1 class="post-title">{{ loadedPost.title }}</h1>
+      <h1 class="post-title" v-html="loadedPost.title"></h1>
       <div class="post-details">
         <!--<div class="post-detail">Last updated on {{ loadedPost.updatedDate | date }}</div>
         <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
       </div>
-      <p class="post-content" v-html="loadedPost.text">></p>
+      <p class="post-content" v-html="loadedPost.text" ></p>
     </section>
     <section class="post-feedback">
-      <p>Let me know what you think about the post, send a mail to <a href="mailto:lova@lova.news">lova@lova.news</a>.
-      </p>
     </section>
   </div>
 </template>
@@ -25,16 +23,17 @@
       }
       let postId = await context.params.id;
       let categories = await context.app.$axios('http://admin.lova.news/categories');
-      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)
+      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
-      console.log(context.store.getters.getSinglePost)
         return {
           loadedPost: context.store.getters.getSinglePost
         }
     },
-    head: {
-      title: 'A Blog Post'
+    head () {
+      return {
+        title: this.loadedPost.title,
+      }
     }
   }
 </script>
@@ -74,6 +73,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .post-content {
+    text-align: left;
   }
 
   @media (min-width: 768px) {

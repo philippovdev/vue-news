@@ -27,7 +27,7 @@
     asyncData (context) { // Getting data for nav links
       return context.$axios.get('http://admin.lova.news/categories')
         .then((res) => {
-          context.store.commit('setCategories', [...res.data])
+          context.store.commit('setCategories', res.data)
         })
     }
   }
@@ -42,7 +42,7 @@
     background-image: url("~/assets/images/lova-home-background.jpg");
     background-position: center;
     background-size: cover;
-    filter: sepia(1);
+    filter: grayscale(.3);
   }
 
   .intro h1 {
