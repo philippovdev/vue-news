@@ -5,7 +5,7 @@
           class="post-thumbnail"
           :style="{backgroundImage: 'url(' + image + ')'}"></div>
         <div class="post-content">
-          <h1 v-html="title"></h1>
+          <h2 v-html="title"></h2>
           <div v-html="description"></div>
         </div>
       </article>

@@ -1,0 +1,20 @@
+.ad--top {
+  height: 200px;
+  width: 680px;
+  margin: 3rem auto;
+  box-shadow: $cardShadow;
+  background-color: #cccccc;
+  content: 'ads';
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: 'G-ADS';
+    font-size: 5rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

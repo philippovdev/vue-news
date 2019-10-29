@@ -1,7 +1,9 @@
 @import '~normalize.css';
 @import "_variables/_variables.pcss";
+@import "_mixins/_mixins.pcss";
 @import "_base/_grid.pcss";
 @import "_animations/_animations.pcss";
 @import "_single-post/_layout.pcss";
 @import "_elements/_btn.pcss";
 @import "_elements/_post-card.pcss";
+@import "_elements/_ads.pcss";
