@@ -1,12 +1,14 @@
 <template>
-  <div class="single-post-page" :style="{backgroundImage: 'url(' + loadedPost.image + ')'}">
+  <div class="single-post-page">
     <section class="post" >
-      <h1 class="post-title" v-html="loadedPost.title"></h1>
-      <div class="post-details">
+      <div class="post__ad ad--top"></div>
+      <h1 class="post__title" v-html="loadedPost.title"></h1>
+      <div class="post__bg" :style="{backgroundImage: 'url(' + loadedPost.image + ')'}"></div>
+      <div class="post__details">
         <!--<div class="post-detail">Last updated on {{ loadedPost.updatedDate | date }}</div>
         <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
       </div>
-      <p class="post-content" v-html="loadedPost.text" ></p>
+      <p class="post__content" v-html="loadedPost.text" ></p>
     </section>
     <section class="post-feedback">
     </section>
@@ -21,9 +23,9 @@
           loadedPost: context.payload
         }
       }
-      let postId = await context.params.id;
-      let categories = await context.app.$axios('http://admin.lova.news/categories');
-      let loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
+      const postId = await context.params.id;
+      const categories = await context.app.$axios('http://admin.lova.news/categories');
+      const loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
         return {
@@ -41,6 +43,27 @@
 
 <style scoped>
   .single-post-page {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .post {
+    margin-top: 3rem;
+    &__title {
+      text-align: center;
+    }
+    &__bg {
+      height: 400px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+    &__content {
+      text-align: left;
+      padding: 3rem;
+      line-height: 1.6rem;
+    }
+  }
+  /*.single-post-page {
     padding: 30px;
     box-sizing: border-box;
     background-size: 100%;
@@ -98,5 +121,5 @@
   .post-feedback a:hover,
   .post-feedback a:active {
     color: salmon;
-  }
+  }*/
 </style>

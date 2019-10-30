@@ -3,6 +3,7 @@
     <section class="intro">
       <h1>Fresh news from all over the World!</h1>
     </section>
+    <div class="ad--top"></div>
     <PostList :posts="loadedPosts"/>
     <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
   </div>
