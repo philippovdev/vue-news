@@ -1,0 +1,30 @@
+.heading {
+  &--main {
+    text-align: center;
+    font-weight: lighter;
+    margin: 3rem auto 5rem auto;
+    font-size: 2.5rem;
+    position: relative;
+    width: 700px;
+    letter-spacing: .3rem;
+
+    &::after {
+      content: '';
+      height: 1px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2rem;
+      background-color: #cccccc;
+
+    }
+  }
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.post__content > div {
+  margin-bottom: 10px;
+}

@@ -1,5 +1,6 @@
 <template>
-  <div class="category-page">
+  <div class="category-page container">
+    <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top"></div>
     <PostList :posts="categoryPosts"/>
     <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
@@ -22,7 +23,7 @@
       context.store.commit('setCategories', categories.data)
       return {
         categoryPosts: context.store.getters.getPostsByCategory,
-
+        category: category
       }
     },
     methods: {

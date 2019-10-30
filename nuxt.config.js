@@ -68,15 +68,17 @@ module.exports = {
       plugins: {
         // Disable a plugin by passing false as value
         'postcss-url': false,
+        'postcss-simple-vars': {},
+        'postcss-mixins': {},
         'postcss-nested': {},
         'postcss-hexrgba': {},
-        'cssnano': { preset: 'default' },
         'postcss-preset-env': {
           stage: 0,
           browsers: [
             'last 2 versions',
             'ie >= 11',
           ],
+        'cssnano': { preset: 'default' },
         },
       },
       preset: {

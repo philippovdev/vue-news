@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.pcss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_animations/_animations.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_base/_grid.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_elements/_btn.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_single-post/_layout.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/variables/_variables.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_typography/_typography.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_post-list.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navigation/TheSideNavToggle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation/TheSideNavToggle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/PostList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/postcss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
-        <option value="PostCSS File" />
         <option value="JavaScript File" />
+        <option value="PostCSS File" />
       </list>
     </option>
   </component>
@@ -140,7 +152,7 @@
       <workItem from="1571977606603" duration="7485000" />
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
-      <workItem from="1572284549232" duration="20661000" />
+      <workItem from="1572284549232" duration="29023000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -254,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572324836923</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Have to add postcss mixins">
+      <created>1572412719372</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1572412719372</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
