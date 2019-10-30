@@ -62,6 +62,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
