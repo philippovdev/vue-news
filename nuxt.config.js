@@ -11,14 +11,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'WD Blog',
+    title: 'LOVA News',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'My cool Web Development Blog'
+        content: 'Fresh news from all over the World.'
       }
     ],
     link: [
