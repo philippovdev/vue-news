@@ -3,7 +3,10 @@
       <article>
         <div
           class="post-thumbnail"
-          :style="{backgroundImage: 'url(' + image + ')'}"></div>
+          :style="{backgroundImage: 'url(' + image + ')'}">
+          <span class="post__category-box">{{ category }}</span>
+          <span class="post__category-overlay"></span>
+        </div>
         <div class="post-content">
           <h2 v-html="limitText(title, 50)"></h2>
           <div v-html="limitText(description, 100)"></div>
