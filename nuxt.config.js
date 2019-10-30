@@ -47,7 +47,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/postcss.js'],
+  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js'],
 
   /*
   ** Nuxt.js modules
@@ -69,35 +69,14 @@ module.exports = {
         // Disable a plugin by passing false as value
         'postcss-url': false,
         'postcss-nested': {},
-        'postcss-responsive-type': {},
         'postcss-hexrgba': {},
         'cssnano': { preset: 'default' },
         'postcss-preset-env': {
+          stage: 0,
           browsers: [
             'last 2 versions',
             'ie >= 11',
           ],
-          stage: 0,
-        },
-        'postcss-custom-media': {
-          extensions: {
-            '--viewport-xs-min': '(min-width: 0)',
-            '--viewport-xs-max': '(max-width: 575px)',
-            /* Small medium screen / phablet, large phones */
-            '--viewport-ms-min': '(min-width: 576px)',
-            '--viewport-ms-max': '(max-width: 767px)',
-            /* Small screen / tablet */
-            '--viewport-sm-min': '(min-width: 768px)',
-            '--viewport-sm-max': '(max-width: 991px)',
-            /* Medium screen / desktop */
-            '--viewport-md-min': '(min-width: 992px)',
-            '--viewport-md-max': '(max-width: 1199px)',
-            /* Large screen / wide desktop */
-            '--viewport-lg-min': '(min-width: 1200px)',
-            '--viewport-lg-max': '(max-width: 1399px)',
-            /* X Large screen / X wide desktop */
-            '--viewport-xl-min': '(min-width: 1400px)',
-          },
         },
       },
       preset: {

@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/_elements/_ads.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/postcss.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/_base/_grid.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_base/_grid.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_elements/_post-card.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_mixins/_mixins.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/_variables/_variables.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/postcss.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -121,9 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +140,7 @@
       <workItem from="1571977606603" duration="7485000" />
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
-      <workItem from="1572284549232" duration="12083000" />
+      <workItem from="1572284549232" duration="20661000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -253,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572322111293</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Have to add postcss mixins">
+      <created>1572324836923</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572324836923</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +288,7 @@
     <MESSAGE value="Fixed wrong behaviour of html symbols in titles and main text" />
     <MESSAGE value="Added meta titles and css folders" />
     <MESSAGE value="Added filters to uppercase first letter in nav menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added filters to uppercase first letter in nav menu" />
+    <MESSAGE value="Have to add postcss mixins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Have to add postcss mixins" />
   </component>
 </project>
