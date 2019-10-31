@@ -4,6 +4,7 @@
     <div class="ad--top"></div>
     <PostList :posts="categoryPosts"/>
     <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+    <div class="ad--bottom"></div>
   </div>
 </template>
 

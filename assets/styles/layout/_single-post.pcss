@@ -1,0 +1,24 @@
+.post {
+  margin-top: 3rem;
+  &__title {
+    text-align: center;
+    font-weight: lighter;
+  }
+  &__bg {
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+  &__content {
+    text-align: left;
+    padding: 3rem;
+    line-height: 1.6rem;
+  }
+
+  @mixin small {
+    &__content {
+      padding: 0;
+    }
+  }
+}

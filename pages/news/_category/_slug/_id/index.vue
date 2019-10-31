@@ -1,5 +1,5 @@
 <template>
-  <div class="single-post-page">
+  <div class="single-post-page container">
     <section class="post" >
       <div class="post__ad ad--top"></div>
       <h1 class="post__title" v-html="loadedPost.title"></h1>
@@ -9,6 +9,7 @@
         <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
       </div>
       <div class="post__content" v-html="loadedPost.text" ></div>
+      <div class="ad--bottom"></div>
     </section>
     <section class="post-feedback">
     </section>
@@ -29,7 +30,7 @@
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
         return {
-          loadedPost: context.store.getters.getSinglePost
+          loadedPost: context.store.getters.getSinglePost,
         }
     },
     head () {
@@ -42,25 +43,4 @@
 
 
 <style scoped>
-  .single-post-page {
-    width: 800px;
-    margin: 0 auto;
-  }
-  .post {
-    margin-top: 3rem;
-    &__title {
-      text-align: center;
-    }
-    &__bg {
-      height: 400px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-    }
-    &__content {
-      text-align: left;
-      padding: 3rem;
-      line-height: 1.6rem;
-    }
-  }
 </style>

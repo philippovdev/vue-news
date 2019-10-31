@@ -1,23 +1,37 @@
-.ad--top {
-  height: 200px;
-  width: 680px;
-  margin: 3rem auto;
-  background-color: #cccccc;
-  content: 'ads';
-  text-align: center;
-  position: relative;
+.ad {
+  &--top,
+  &--bottom {
+    height: 200px;
+    width: 680px;
+    margin: 3rem auto;
+    background-color: #cccccc;
+    content: 'ads';
+    text-align: center;
+    position: relative;
 
-  &::before {
-    content: 'G-ADS';
-    font-size: 5rem;
-    color: #fff;
-    @mixin absoluteCenter;
+    &::before {
+      content: 'G-ADS';
+      font-size: 5rem;
+      color: #fff;
+      @mixin absoluteCenter;
+    }
+    &::after {
+      content: 'Advertisement';
+      position: absolute;
+      top: -18px;
+      font-size: .8rem;
+      left: 0;
+    }
   }
-  &::after {
-    content: 'Реклама';
-    position: absolute;
-    top: -18px;
-    font-size: .8rem;
-    left: 0;
+
+  @mixin small {
+    &--top,
+    &--bottom {
+      width: 100%;
+      margin: 2rem auto;
+      &::before {
+        font-size: 2rem;
+      }
+    }
   }
 }
