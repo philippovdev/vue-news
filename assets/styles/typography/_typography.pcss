@@ -1,0 +1,39 @@
+.heading {
+  &--main {
+    text-align: center;
+    font-weight: lighter;
+    margin: 3rem auto 5rem auto;
+    font-size: 2.5rem;
+    position: relative;
+    width: 700px;
+    letter-spacing: .3rem;
+
+    &::after {
+      content: '';
+      height: 1px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2rem;
+      background-color: #cccccc;
+
+    }
+  }
+
+  @mixin small {
+    &--main {
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      width: 90%;
+      margin: 2rem auto 5rem auto;
+    }
+  }
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.post__content > div {
+  margin-bottom: 10px;
+}

@@ -1,7 +1,6 @@
 <template>
 <div class="header-container">
   <header class="the-header">
-    <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
     <div class="logo">
       <nuxt-link to="/"><b>LOVA</b> News</nuxt-link>
     </div>
@@ -11,6 +10,7 @@
         <li v-for="link in links" class="nav-item" ><nuxt-link :to="link.to">{{ link.text | firstUppercase }}</nuxt-link></li>
       </ul>
     </div>
+    <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
   </header>
 </div>
 </template>

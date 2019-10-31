@@ -2,11 +2,14 @@
   <nuxt-link :to="postLink" class="post-preview">
       <article>
         <div
-          class="post-thumbnail"
-          :style="{backgroundImage: 'url(' + image + ')'}"></div>
-        <div class="post-content">
-          <h2 v-html="title"></h2>
-          <div v-html="description"></div>
+          class="post-preview__thumbnail"
+          :style="{backgroundImage: 'url(' + image + ')'}">
+          <span class="post__category-box">{{ category }}</span>
+          <span class="post__category-overlay"></span>
+        </div>
+        <div class="post-preview__content">
+          <h2 v-html="limitText(title, 50)"></h2>
+          <div v-html="limitText(description, 100)"></div>
         </div>
       </article>
   </nuxt-link>
@@ -50,6 +53,21 @@
         return /* this.isAdmin ? '/admin/' + this.id :*/ `/news/${this.category.toLowerCase()}/${this.slug}/${this.id}`
       },
     },
+    methods: {
+      limitText (text, limit = 25) {
+        const newText = [];
+        if (text.length > limit) {
+          text.split(' ').reduce((acc, cur) => {
+            if (acc + cur.length <= limit) {
+              newText.push(cur);
+            }
+            return acc += cur.length
+          }, 0);
+          return `${newText.join(' ')} ...`;
+        }
+        return text;
+      }
+    }
   }
 </script>
 

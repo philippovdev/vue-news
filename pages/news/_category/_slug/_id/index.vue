@@ -1,5 +1,5 @@
 <template>
-  <div class="single-post-page">
+  <div class="single-post-page container">
     <section class="post" >
       <div class="post__ad ad--top"></div>
       <h1 class="post__title" v-html="loadedPost.title"></h1>
@@ -8,7 +8,8 @@
         <!--<div class="post-detail">Last updated on {{ loadedPost.updatedDate | date }}</div>
         <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
       </div>
-      <p class="post__content" v-html="loadedPost.text" ></p>
+      <div class="post__content" v-html="loadedPost.text" ></div>
+      <div class="ad--bottom"></div>
     </section>
     <section class="post-feedback">
     </section>
@@ -29,7 +30,7 @@
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
         return {
-          loadedPost: context.store.getters.getSinglePost
+          loadedPost: context.store.getters.getSinglePost,
         }
     },
     head () {
@@ -42,84 +43,4 @@
 
 
 <style scoped>
-  .single-post-page {
-    width: 800px;
-    margin: 0 auto;
-  }
-  .post {
-    margin-top: 3rem;
-    &__title {
-      text-align: center;
-    }
-    &__bg {
-      height: 400px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-    }
-    &__content {
-      text-align: left;
-      padding: 3rem;
-      line-height: 1.6rem;
-    }
-  }
-  /*.single-post-page {
-    padding: 30px;
-    box-sizing: border-box;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-
-  .post {
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(255,255,255,.9);
-  }
-
-  @media (min-width: 768px) {
-    .post {
-      width: 600px;
-      margin: auto;
-    }
-  }
-
-  .post-title {
-    text-align: center;
-    margin: 0;
-  }
-
-  .post-details {
-    padding: 10px;
-    box-sizing: border-box;
-    border-bottom: 3px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .post-content {
-    text-align: left;
-  }
-
-  @media (min-width: 768px) {
-    .post-details {
-      flex-direction: row;
-    }
-  }
-
-  .post-detail {
-    color: rgb(88, 88, 88);
-    margin: 0 10px;
-  }
-
-  .post-feedback a {
-    color: red;
-    text-decoration: none;
-  }
-
-  .post-feedback a:hover,
-  .post-feedback a:active {
-    color: salmon;
-  }*/
 </style>

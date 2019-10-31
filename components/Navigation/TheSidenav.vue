@@ -11,7 +11,7 @@
       <ul
         class="nav-list"
         @click="$emit('close')">
-        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" tag="a">{{ link.text }}</nuxt-link></li>
+        <li v-for="link in links" class="nav-item"><nuxt-link :to="link.to" tag="a">{{ link.text | firstUppercase }}</nuxt-link></li>
       </ul>
     </div>
   </transition>
@@ -49,7 +49,7 @@ export default {
   z-index: 1000;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .sidenav {
@@ -59,7 +59,7 @@ export default {
   z-index: 10000;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   box-sizing: border-box;
   padding: 30px;
 }
@@ -70,7 +70,7 @@ export default {
 }
 .slide-side-enter,
 .slide-side-leave-to {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 
 .nav-list {

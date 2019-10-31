@@ -1,8 +1,10 @@
 <template>
-  <div class="category-page">
+  <div class="category-page container">
+    <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top"></div>
     <PostList :posts="categoryPosts"/>
     <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+    <div class="ad--bottom"></div>
   </div>
 </template>
 
@@ -12,27 +14,39 @@
   export default {
     name: 'index',
     components: { PostList },
-    async asyncData(context) {
-      let category = await context.route.params.category;
-      let getInitialPosts = await context.app.$axios('http://admin.lova.news/news/12/' + category);
+    async asyncData (context) {
+      let category = await context.route.params.category
+      let getInitialPosts = await context.app.$axios('http://admin.lova.news/news/12/' + category)
       let categories = await context.app.$axios('http://admin.lova.news/categories')
-      context.store.commit('setPostsByCategory', []);
-      context.store.commit('setPostsByCategory', getInitialPosts.data.data);
+      context.store.commit('setPostsByCategory', [])
+      context.store.commit('setPostsByCategory', getInitialPosts.data.data)
       context.store.commit('setNextCategoryPage', getInitialPosts.data['next_page_url'])
       context.store.commit('setCategories', categories.data)
       return {
         categoryPosts: context.store.getters.getPostsByCategory,
-
+        category: category
       }
     },
     methods: {
-      loadNewPosts() {
+      loadNewPosts () {
         this.$axios.get(this.$store.getters.getNextCategoryPage)
           .then(res => {
             this.$store.commit('setPostsByCategory', [...this.$store.getters.getPostsByCategory, ...res.data.data])
-            this.$store.commit('setNextCategoryPage', res.data['next_page_url']);
-            this.categoryPosts = this.$store.getters.getPostsByCategory;
-          });
+            this.$store.commit('setNextCategoryPage', res.data['next_page_url'])
+            this.categoryPosts = this.$store.getters.getPostsByCategory
+          })
+      },
+      firstUpper (value) {
+        if (!value) {
+          return ''
+        }
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      }
+    },
+    head () {
+      return {
+        title: `${this.firstUpper(this.category)} News`,
       }
     }
   }
