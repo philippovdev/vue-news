@@ -3,7 +3,10 @@
     <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top"></div>
     <PostList :posts="categoryPosts"/>
-    <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+    <div class="btn-box">
+      <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+      <span class="btn__load-more"></span>
+    </div>
     <div class="ad--bottom"></div>
   </div>
 </template>

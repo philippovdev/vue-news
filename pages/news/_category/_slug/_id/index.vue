@@ -9,7 +9,7 @@
         <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
       </div>
       <div class="post__content" v-html="loadedPost.text" ></div>
-      <div class="ad--bottom"></div>
+      <div class="post__ad ad--bottom"></div>
     </section>
     <section class="post-feedback">
     </section>
