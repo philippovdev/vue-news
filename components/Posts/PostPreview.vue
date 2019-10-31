@@ -8,8 +8,8 @@
           <span class="post__category-overlay"></span>
         </div>
         <div class="post-preview__content">
-          <h2 v-html="limitText(title, 50)"></h2>
-          <div v-html="limitText(description, 100)"></div>
+          <h2 class="post-preview__title" v-html="limitText(title, 44)"></h2>
+          <div class="post-preview__description" v-html="limitText(description, 110)"></div>
         </div>
       </article>
   </nuxt-link>

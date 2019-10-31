@@ -15,23 +15,21 @@
       color: #fff;
       @mixin absoluteCenter;
     }
-    &::after {
-      content: 'Advertisement';
-      position: absolute;
-      top: -18px;
-      font-size: .8rem;
-      left: 0;
-    }
-  }
 
-  @mixin small {
-    &--top,
-    &--bottom {
+    @mixin medium {
       width: 100%;
       margin: 2rem auto;
       &::before {
         font-size: 2rem;
       }
+    }
+
+    &::after {
+      content: 'Ads';
+      position: absolute;
+      top: -18px;
+      font-size: .8rem;
+      left: 0;
     }
   }
 }

@@ -62,6 +62,9 @@ const createStore = () => {
             for (const post in data.data) {
               postsArray.push({ ...data.data[post], id: data.data[post]['id'] })
             }
+            for (const post in postsArray) {
+              console.log(post);
+            }
             vuexContext.commit('setPosts', postsArray);
             if (data['next_page_url']) {
               vuexContext.commit('setNext', data['next_page_url'])
