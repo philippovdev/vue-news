@@ -21,6 +21,13 @@ module.exports = {
         content: 'Fresh news from all over the World.'
       }
     ],
+    script: [
+      {
+        async: true,
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        'data-ad-client': 'ca-pub-6228577781902066'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
