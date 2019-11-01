@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +140,7 @@
       <workItem from="1571977606603" duration="7485000" />
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
-      <workItem from="1572284549232" duration="49541000" />
+      <workItem from="1572284549232" duration="49663000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -300,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572551306259</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Styled single post section and added adsence script">
+      <created>1572585392213</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1572585392213</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +343,7 @@
     <MESSAGE value="Added category label to card" />
     <MESSAGE value="Mobile styles for main page and post added" />
     <MESSAGE value="Fixed main drawer layout styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed main drawer layout styling" />
+    <MESSAGE value="Styled single post section and added adsence script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styled single post section and added adsence script" />
   </component>
 </project>
