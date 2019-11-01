@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,7 +144,7 @@
       <workItem from="1571977606603" duration="7485000" />
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
-      <workItem from="1572284549232" duration="43312000" />
+      <workItem from="1572284549232" duration="49541000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -299,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572498253671</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed main drawer layout styling">
+      <created>1572551306259</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572551306259</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +339,7 @@
     <MESSAGE value="Meta title added to categories" />
     <MESSAGE value="Added category label to card" />
     <MESSAGE value="Mobile styles for main page and post added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mobile styles for main page and post added" />
+    <MESSAGE value="Fixed main drawer layout styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed main drawer layout styling" />
   </component>
 </project>

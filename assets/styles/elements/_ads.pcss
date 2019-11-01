@@ -1,4 +1,40 @@
 .ad {
+  &--side {
+    background-color: #cccccc;
+    text-align: center;
+    position: relative;
+    height: 100%;
+
+    &::before {
+      content: 'G-ADS';
+      font-size: 2rem;
+      color: #fff;
+      @mixin absoluteCenter;
+    }
+
+    @mixin medium {
+      width: 100%;
+      &::before {
+        font-size: 2rem;
+      }
+    }
+
+    &::after {
+      transform: rotate(-90deg);
+      transform-origin: top right;
+      content: 'Ads';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      font-size: .8rem;
+
+      @mixin medium {
+        transform: rotate(0);
+        top: -15px;
+        left: 0;
+      }
+    }
+  }
   &--top,
   &--bottom {
     height: 200px;
