@@ -19,8 +19,8 @@
     components: { PostList },
     async asyncData (context) {
       let category = await context.route.params.category
-      let getInitialPosts = await context.app.$axios('http://admin.lova.news/news/12/' + category)
-      let categories = await context.app.$axios('http://admin.lova.news/categories')
+      let getInitialPosts = await context.app.$axios('https://admin.lova.news/news/12/' + category)
+      let categories = await context.app.$axios('https://admin.lova.news/categories')
       context.store.commit('setPostsByCategory', [])
       context.store.commit('setPostsByCategory', getInitialPosts.data.data)
       context.store.commit('setNextCategoryPage', getInitialPosts.data['next_page_url'])

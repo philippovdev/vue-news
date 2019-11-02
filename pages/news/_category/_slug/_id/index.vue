@@ -28,8 +28,8 @@
         }
       }
       const postId = await context.params.id
-      const categories = await context.app.$axios('http://admin.lova.news/categories')
-      const loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)
+      const categories = await context.app.$axios('https://admin.lova.news/categories')
+      const loadedPost = await context.app.$axios.$get('https://admin.lova.news/news/view/' + postId)
       context.store.commit('setCategories', categories.data)
       context.store.commit('setSinglePost', loadedPost)
       return {
