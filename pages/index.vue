@@ -3,7 +3,7 @@
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <div class="ad--top"></div>
     <PostList :posts="loadedPosts"/>
-    <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+    <!--<button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
     <div class="ad--bottom"></div>
   </div>
 </template>
@@ -16,6 +16,14 @@
       },
     },
     methods: {
+      scroll () {
+        window.onscroll = () => {
+          let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.offsetHeight;
+          if (bottomOfWindow) {
+            this.loadNewPosts();
+          }
+        };
+      },
       loadNewPosts() { // Loading next page on click and commiting store actions with actual data
         this.$axios.get(this.$store.getters.nextPage)
           .then(res => {
@@ -23,6 +31,9 @@
               this.$store.commit('setNext', res.data['next_page_url'])
           });
       }
+    },
+    mounted() {
+      this.scroll();
     },
     asyncData (context) { // Getting data for nav links
       return context.$axios.get('https://admin.lova.news/categories')
