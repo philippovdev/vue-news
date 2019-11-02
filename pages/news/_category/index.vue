@@ -4,7 +4,7 @@
     <div class="ad--top"></div>
     <PostList :posts="categoryPosts"/>
     <div class="btn-box">
-      <button class="btn btn__load" @click="loadNewPosts">Next Page</button>
+<!--      <button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
       <span class="btn__load-more"></span>
     </div>
     <div class="ad--bottom"></div>
@@ -30,7 +30,18 @@
         category: category
       }
     },
+    mounted() {
+      this.scroll();
+    },
     methods: {
+      scroll () {
+        window.onscroll = () => {
+          let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.offsetHeight;
+          if (bottomOfWindow) {
+            this.loadNewPosts();
+          }
+        };
+      },
       loadNewPosts () {
         this.$axios.get(this.$store.getters.getNextCategoryPage)
           .then(res => {

@@ -18,13 +18,9 @@
     methods: {
       scroll () {
         window.onscroll = () => {
-          let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight + 200) >= document.documentElement.offsetHeight;
+          let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) >= document.documentElement.offsetHeight;
           if (bottomOfWindow) {
-            this.$axios.get(this.$store.getters.nextPage)
-              .then(res => {
-                this.$store.commit('setPosts', [...this.$store.getters.loadedPosts, ...res.data.data])
-                this.$store.commit('setNext', res.data['next_page_url'])
-              });
+            this.loadNewPosts();
           }
         };
       },
@@ -35,6 +31,9 @@
               this.$store.commit('setNext', res.data['next_page_url'])
           });
       }
+    },
+    mounted() {
+      this.scroll();
     },
     asyncData (context) { // Getting data for nav links
       return context.$axios.get('http://admin.lova.news/categories')

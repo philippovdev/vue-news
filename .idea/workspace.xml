@@ -4,6 +4,7 @@
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -364,6 +365,7 @@
     <MESSAGE value="Fixed main drawer layout styling" />
     <MESSAGE value="Styled single post section and added adsence script" />
     <MESSAGE value="Cleaned console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned console" />
+    <MESSAGE value="Keep working on async load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Keep working on async load" />
   </component>
 </project>
