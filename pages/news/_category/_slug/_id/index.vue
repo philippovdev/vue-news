@@ -31,7 +31,6 @@
       const sourceLink = source.data[0].link;
       const sourcePath = sourceSite + sourceLink;
 
-      console.log('sourceName', sourceName)
       context.store.commit('setCategories', categories.data);
       context.store.commit('setSinglePost', loadedPost);
       context.store.commit('setSourceLink', sourcePath);

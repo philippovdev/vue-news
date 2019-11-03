@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -364,7 +363,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Basic functional is alive and ready to go" />
     <MESSAGE value="Fixed bug of wrong routing construction for categories" />
     <MESSAGE value="Added background-image to post" />
     <MESSAGE value="Changed bg for main page" />
@@ -389,6 +387,7 @@
     <MESSAGE value="Keep working on async load" />
     <MESSAGE value="Infinite pagination added for main and category" />
     <MESSAGE value="Fixing infinite loading for the main page and category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing infinite loading for the main page and category" />
+    <MESSAGE value="httpS fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="httpS fix" />
   </component>
 </project>
