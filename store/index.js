@@ -6,6 +6,8 @@ const createStore = () => {
     state: {
       nextPage: null,
       categoryNextPage: null,
+      sourceLink: null,
+      sourceName: null,
       postsByCategory: [],
       loadedPosts: [],
       post: null,
@@ -36,7 +38,14 @@ const createStore = () => {
       },
       setSinglePost (state, post) {
         state.post = post
+      },
+      setSourceLink (state, sourceLink) {
+        state.sourceLink = sourceLink
+      },
+      setSourceName (state, sourceName) {
+        state.sourceName = sourceName
       }
+
       /*addPost (state, post) {
         state.loadedPosts.push(post)
       },
@@ -113,7 +122,13 @@ const createStore = () => {
       },
       setSinglePost (vuexContext, post) {
         vuexContext.commit('setSinglePost', post)
-      }
+      },
+      setSourceLink (vuexContext, sourceLink) {
+        vuexContext.commit('setSourceLink', sourceLink)
+      },
+      setSourceName (vuexContext, sourceName) {
+        vuexContext.commit('setSourceName', sourceName)
+      },
       /*authenticateUser (vuexContext, authData) {
         let authUrl =
           'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' +
@@ -205,6 +220,12 @@ const createStore = () => {
       },
       getSinglePost (state) {
         return state.post
+      },
+      getSourceLink (state) {
+        return state.sourceLink
+      },
+      getSourceName (state) {
+        return state.sourceName
       },
       categories (state) {
         const categories = []
