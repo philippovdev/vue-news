@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

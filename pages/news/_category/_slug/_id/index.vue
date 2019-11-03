@@ -22,10 +22,10 @@
         }
       }
       const postId = await context.params.id
-      const categories = await context.app.$axios('http://admin.lova.news/categories')
-      const loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
+      const categories = await context.app.$axios('https://admin.lova.news/categories')
+      const loadedPost = await context.app.$axios.$get('https://admin.lova.news/news/view/' + postId);
       const category = context.route.params.category;
-      const source = await context.app.$axios.$get('http://admin.lova.news/news/1/' + category);
+      const source = await context.app.$axios.$get('https://admin.lova.news/news/1/' + category);
       const sourceName = source.data[0].source.name;
       const sourceSite = source.data[0].source.site;
       const sourceLink = source.data[0].link;
