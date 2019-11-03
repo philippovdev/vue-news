@@ -1,11 +1,53 @@
 .ad {
   &--feed {
+    box-shadow: 1px 1px 5px #ccc;
+    width: 100%;
     background-color: #cccccc;
-    text-align: center;
-    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
     height: 400px;
-    width: 400px;
+    transition: transform .2s;
+    position: relative;
+
+    &::after {
+      transform: rotate(-90deg);
+      transform-origin: top right;
+      content: 'Ads';
+      position: absolute;
+      top: 5px;
+      left: -20px;
+      font-size: .8rem;
+    }
+
+    &::before {
+      content: 'G-ADS';
+      font-size: 2rem;
+      color: #fff;
+      @mixin absoluteCenter;
+    }
+
+    @mixin small {
+      margin-bottom: .5em;
+      width: 100%;
+    }
+    @mixin medium {
+      width: 500px;
+      margin: .5rem 0;
+    }
+
+    @mixin atMedium {
+      width: 350px;
+      margin: .5rem;
+    }
+    @mixin atLarge {
+      width: 380px;
+      margin: .5rem;
+    }
+    &:hover {
+      transform: scale(1.01);
+    }
   }
+
   &--side {
     background-color: #cccccc;
     text-align: center;
@@ -42,6 +84,7 @@
       }
     }
   }
+
   &--top,
   &--bottom {
     height: 200px;

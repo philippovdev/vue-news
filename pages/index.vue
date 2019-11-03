@@ -3,7 +3,6 @@
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <div class="ad--top"></div>
     <PostList :posts="loadedPosts"/>
-    <!--<button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
     <div class="ad--bottom"></div>
   </div>
 </template>
@@ -18,7 +17,7 @@
     },
     methods: {
       insertAfter (el, referenceNode) {
-        referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+        referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling)
       },
       scroll () {
         window.onscroll = () => {
@@ -30,25 +29,27 @@
           }
         }
       },
-      loadNewPosts () { // Loading next page on click and commiting store actions with actual data
+      loadNewPosts () {
         this.$axios.get(this.$store.getters.nextPage)
           .then(res => {
             this.$store.commit('setPosts', [...this.$store.getters.loadedPosts, ...res.data.data])
             this.$store.commit('setNext', res.data['next_page_url'])
           })
+      },
+      addAds () {
+        const postBlocks = document.querySelectorAll('.post-preview')
+        for (const post in postBlocks) {
+          const ad = document.createElement('div')
+          ad.classList.add('ad--feed')
+          if (+post !== 0 && +post % 4 === 0) {
+            this.insertAfter(ad, postBlocks[post])
+          }
+        }
       }
     },
     mounted () {
-      this.scroll();
-
-      const postBlocks = document.querySelectorAll('.post-preview');
-      for (const post in postBlocks) {
-        const ad = document.createElement('div');
-        ad.classList.add('ad--feed');
-        if (+post !== 0 && +post % 4 === 0) {
-          this.insertAfter(ad, postBlocks[post]);
-        }
-      }
+      this.addAds()
+      this.scroll()
     },
     asyncData (context) { // Getting data for nav links
       return context.$axios.get('https://admin.lova.news/categories')

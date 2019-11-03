@@ -64,16 +64,14 @@ const createStore = () => {
     },
     actions: {
       nuxtServerInit (vuexContext, context) {
-        return context.app.$axios
-          .$get(this.nextPage)
-          .then(data => {
+        return context.app.$axios.$get(this.nextPage).then(data => {
             const postsArray = [];
             for (const post in data.data) {
               postsArray.push({ ...data.data[post], id: data.data[post]['id'] })
             }
             vuexContext.commit('setPosts', postsArray);
             if (data['next_page_url']) {
-              vuexContext.commit('setNext', data['next_page_url'])
+              vuexContext.commit('setNext', 'https://admin.lova.news/news/12?page=2')
             }
           })
           .catch(e => context.error(e))

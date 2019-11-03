@@ -72,8 +72,8 @@ function errorHandler(error, ctx) {
 
 // Setup BaseURL
 const baseURL = process.browser
-  ? (process.env.API_URL_BROWSER || 'https://admin.lova.news/news/12')
-  : (process.env.API_URL || 'https://admin.lova.news/news/12')
+  ? (process.env.API_URL_BROWSER || 'https://admin.lova.news/news/10')
+  : (process.env.API_URL || 'https://admin.lova.news/news/10')
 
 // Custom init hook
 
