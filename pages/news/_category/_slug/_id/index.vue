@@ -1,26 +1,20 @@
 <template>
   <div class="single-post-page">
-    <section class="post">
-      <div class="post__ad ad--top"></div>
-      <h1 class="post__title" v-html="loadedPost.title"></h1>
-      <div class="post__hero">
-        <div class="post__bg" :style="{backgroundImage: 'url(' + loadedPost.image + ')'}"></div>
-        <div class="post__ad-1-3 ad--side"></div>
-      </div>
-      <div class="post__details">
-        <!--<div class="post-detail">Last updated on {{ loadedPost.updatedDate | date }}</div>
-        <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
-      </div>
-      <div class="post__content" v-html="loadedPost.text"></div>
-      <div class="post__ad ad--bottom"></div>
-    </section>
-    <section class="post-feedback">
-    </section>
+    <SinglePost :title="loadedPost.title"
+                :image="loadedPost.image"
+                :text="loadedPost.text"
+                :source="sourceLink"
+                :sourceName="sourceName"
+    />
   </div>
 </template>
 
 <script>
+  import SinglePost from '@/components/Posts/SinglePost'
   export default {
+    mounted () {
+      this.scroll()
+    },
     async asyncData (context) {
       if (context.payload) {
         return {
@@ -29,18 +23,53 @@
       }
       const postId = await context.params.id
       const categories = await context.app.$axios('http://admin.lova.news/categories')
-      const loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId)
-      context.store.commit('setCategories', categories.data)
-      context.store.commit('setSinglePost', loadedPost)
+      const loadedPost = await context.app.$axios.$get('http://admin.lova.news/news/view/' + postId);
+      const category = context.route.params.category;
+      const source = await context.app.$axios.$get('http://admin.lova.news/news/1/' + category);
+      const sourceName = source.data[0].source.name;
+      const sourceSite = source.data[0].source.site;
+      const sourceLink = source.data[0].link;
+      const sourcePath = sourceSite + sourceLink;
+
+      console.log('sourceName', sourceName)
+      context.store.commit('setCategories', categories.data);
+      context.store.commit('setSinglePost', loadedPost);
+      context.store.commit('setSourceLink', sourcePath);
+      context.store.commit('setSourceName', sourceName);
       return {
-        loadedPost: context.store.getters.getSinglePost
+        loadedPost: context.store.getters.getSinglePost,
+        sourceLink: context.store.getters.getSourceLink,
+        sourceName: context.store.getters.getSourceName
       }
     },
     head () {
       return {
         title: this.loadedPost.title,
       }
-    }
+    },
+    components: {
+      SinglePost
+    },
+    methods: {
+      scroll () {
+        window.onscroll = () => {
+          let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight + 1) >= document.documentElement.offsetHeight
+          if (bottomOfWindow) {
+            this.$nuxt.$loading.start()
+            this.addNextPost()
+            this.$nuxt.$loading.finish()
+          }
+        }
+      },
+      addNextPost () {
+        this.$axios.get(this.$store.getters.getNextPost)
+          .then(res => {
+            this.$store.commit('setPostsByCategory', [...this.$store.getters.getPostsByCategory, ...res.data.data])
+            this.$store.commit('setNextCategoryPage', res.data['next_page_url'])
+            this.categoryPosts = this.$store.getters.getPostsByCategory
+          })
+      },
+    },
   }
 </script>
 
