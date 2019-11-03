@@ -36,14 +36,13 @@ module.exports = {
       }
     ]
   },
-
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff', height: '4px', duration: 2000 },
+  loading: { color: '#999', height: '4px', duration: 1000 },
   loadingIndicator: {
     name: 'circle',
-    color: '#fa923f'
+    color: '#999'
   },
 
   /*
