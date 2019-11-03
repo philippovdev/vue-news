@@ -32,6 +32,15 @@
     },
     mounted() {
       this.scroll();
+
+      const postBlocks = document.querySelectorAll('.post-preview');
+      for (const post in postBlocks) {
+        const ad = document.createElement('div');
+        ad.classList.add('ad--feed');
+        if (+post !== 0 && +post % 4 === 0) {
+          this.insertAfter(ad, postBlocks[post]);
+        }
+      }
     },
     methods: {
       scroll () {
@@ -43,6 +52,9 @@
             this.$nuxt.$loading.finish();
           }
         };
+      },
+      insertAfter (el, referenceNode) {
+        referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
       },
       loadNewPosts () {
         this.$axios.get(this.$store.getters.getNextCategoryPage)
