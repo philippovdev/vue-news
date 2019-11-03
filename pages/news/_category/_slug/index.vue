@@ -23,7 +23,7 @@
           loadedPost: context.payload.postData
         }
       }
-      return context.app.$axios.$get('/news/10/')
+      return context.app.$axios.$get('/news/12/')
         .then(data => {
           let newsId = context.params.id;
           return {

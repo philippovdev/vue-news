@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -343,7 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572785497907</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Deleted console from master">
+      <created>1572785779061</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572785779061</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adding g-ads to main page and category page">
+      <created>1572793152029</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572793152029</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,8 +382,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug of wrong routing construction for categories" />
-    <MESSAGE value="Added background-image to post" />
     <MESSAGE value="Changed bg for main page" />
     <MESSAGE value="fixes" />
     <MESSAGE value="Added more posts upload" />
@@ -388,6 +405,8 @@
     <MESSAGE value="Infinite pagination added for main and category" />
     <MESSAGE value="Fixing infinite loading for the main page and category" />
     <MESSAGE value="httpS fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="httpS fix" />
+    <MESSAGE value="Deleted console from master" />
+    <MESSAGE value="Adding g-ads to main page and category page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding g-ads to main page and category page" />
   </component>
 </project>

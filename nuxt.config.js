@@ -60,7 +60,7 @@ module.exports = {
   */
   modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/12',
+    baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
   },
 
@@ -118,7 +118,7 @@ module.exports = {
   generate: {
     routes: function () {
       return axios
-        .get('https://admin.lova.news/200')
+        .get('https://admin.lova.news/news/200')
         .then(res => {
           const routes = []
           for (const key in res.data) {
