@@ -60,7 +60,7 @@ module.exports = {
   */
   modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.BASE_URL || 'http://admin.lova.news/news/12',
+    baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/12',
     credentials: false
   },
 
@@ -68,6 +68,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -101,7 +102,7 @@ module.exports = {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'http://admin.lova.news/',
+    baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
   },
   transition: {
@@ -117,7 +118,7 @@ module.exports = {
   generate: {
     routes: function () {
       return axios
-        .get('http://admin.lova.news/200')
+        .get('https://admin.lova.news/200')
         .then(res => {
           const routes = []
           for (const key in res.data) {

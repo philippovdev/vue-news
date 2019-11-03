@@ -36,6 +36,7 @@
       context.store.commit('setSinglePost', loadedPost);
       context.store.commit('setSourceLink', sourcePath);
       context.store.commit('setSourceName', sourceName);
+
       return {
         loadedPost: context.store.getters.getSinglePost,
         sourceLink: context.store.getters.getSourceLink,
