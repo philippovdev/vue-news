@@ -1,4 +1,4 @@
-# nuxt-course
+# nuxt-ssr-news
 
 > Nuxt.js news aggregator
 
