@@ -25,10 +25,9 @@
       const categories = await context.app.$axios('https://admin.lova.news/categories')
       const loadedPost = await context.app.$axios.$get('https://admin.lova.news/news/view/' + postId);
       const category = context.route.params.category;
-      const source = await context.app.$axios.$get('https://admin.lova.news/news/1/' + category);
-      const sourceName = source.data[0].source.name;
-      const sourceSite = source.data[0].source.site;
-      const sourceLink = source.data[0].link;
+      const sourceName = loadedPost.source.name;
+      const sourceSite = loadedPost.source.site;
+      const sourceLink = loadedPost.link;
       const sourcePath = sourceSite + sourceLink;
 
       context.store.commit('setCategories', categories.data);
