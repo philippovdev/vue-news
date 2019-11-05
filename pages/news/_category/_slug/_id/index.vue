@@ -11,14 +11,29 @@
 
 <script>
   import SinglePost from '@/components/Posts/SinglePost'
+
   export default {
     mounted () {
-      this.scroll();
-      this.addPostAd();
+      this.scroll()
+      this.addPostAd()
 
-      window.addEventListener('scroll', () => {
-        this.setFixed();
-      })
+      let fixedAd = document.querySelector('.post__ad-1-3.ad--side')
+
+      let lastScrollTop = 0;
+
+      window.addEventListener("scroll", function(){
+        let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+        if (st > lastScrollTop){
+          // downscroll code
+          console.log('down');
+          fixedAd.classList.remove('up');
+        } else {
+          // upscroll code
+          console.log('up')
+          fixedAd.classList.add('up');
+        }
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      }, false);
 
     },
     async asyncData (context) {
@@ -29,18 +44,18 @@
       }
       const postId = await context.params.id
       const categories = await context.app.$axios('https://admin.lova.news/categories')
-      const loadedPost = await context.app.$axios.$get('https://admin.lova.news/news/view/' + postId);
-      const category = context.route.params.category;
-      const source = await context.app.$axios.$get('https://admin.lova.news/news/1/' + category);
-      const sourceName = source.data[0].source.name;
-      const sourceSite = source.data[0].source.site;
-      const sourceLink = source.data[0].link;
-      const sourcePath = sourceSite + sourceLink;
+      const loadedPost = await context.app.$axios.$get('https://admin.lova.news/news/view/' + postId)
+      const category = context.route.params.category
+      const source = await context.app.$axios.$get('https://admin.lova.news/news/1/' + category)
+      const sourceName = source.data[0].source.name
+      const sourceSite = source.data[0].source.site
+      const sourceLink = source.data[0].link
+      const sourcePath = sourceSite + sourceLink
 
-      context.store.commit('setCategories', categories.data);
-      context.store.commit('setSinglePost', loadedPost);
-      context.store.commit('setSourceLink', sourcePath);
-      context.store.commit('setSourceName', sourceName);
+      context.store.commit('setCategories', categories.data)
+      context.store.commit('setSinglePost', loadedPost)
+      context.store.commit('setSourceLink', sourcePath)
+      context.store.commit('setSourceName', sourceName)
 
       return {
         loadedPost: context.store.getters.getSinglePost,
@@ -57,60 +72,60 @@
       SinglePost
     },
     methods: {
-      setFixed() {
-        let navHeight = document.querySelector('.the-header').offsetHeight;
-        let fixedAd = document.querySelector('.post__ad-1-3.ad--side');
-        let adPosition = fixedAd.getBoundingClientRect();
-        let adTop = adPosition.top;
-        let adLeft = adPosition.left;
-        let adWidth = adPosition.width;
-        let adHeight = adPosition.height;
-        let adBottom = adPosition.bottom;
-        let bg = document.querySelector('.post__bg');
-        let bgPosition = bg.getBoundingClientRect();
-        let bgTop = bgPosition.top - navHeight;
-        let postBottom = document.querySelector('.post__content').getBoundingClientRect().bottom;
-        let isUnderBottom = postBottom <= adBottom;
+      setFixed () {
+        let navHeight = document.querySelector('.the-header').offsetHeight
+        let fixedAd = document.querySelector('.post__ad-1-3.ad--side')
+        let adPosition = fixedAd.getBoundingClientRect()
+        let adTop = adPosition.top
+        let adLeft = adPosition.left
+        let adWidth = adPosition.width
+        let adHeight = adPosition.height
+        let adBottom = adPosition.bottom
+        let bg = document.querySelector('.post__bg')
+        let bgPosition = bg.getBoundingClientRect()
+        let bgTop = bgPosition.top - navHeight
+        let postBottom = document.querySelector('.post__content').getBoundingClientRect().bottom
+        let isUnderBottom = postBottom <= adBottom
 
-        console.log(isUnderBottom);
-
+        // Scroll down and grab the ad
         if (bgTop <= 25 && !fixedAd.classList.contains('fixed') && !isUnderBottom && fixedAd.style.position !== 'absolute') {
-          let getCurrentLeft = adLeft + 'px';
-          let getCurrentWidth = adWidth + 'px';
-          let getCurrentHeight = adHeight + 'px';
-          fixedAd.classList.add('fixed');
-          fixedAd.style.top = navHeight + 25 + 'px';
-          fixedAd.style.left = getCurrentLeft;
-          fixedAd.style.width = getCurrentWidth;
-          fixedAd.style.height = getCurrentHeight;
+          let getCurrentLeft = adLeft + 'px'
+          let getCurrentWidth = adWidth + 'px'
+          let getCurrentHeight = adHeight + 'px'
+          fixedAd.classList.add('fixed')
+          fixedAd.style.top = navHeight + 25 + 'px'
+          fixedAd.style.left = getCurrentLeft
+          fixedAd.style.width = getCurrentWidth
+          fixedAd.style.height = getCurrentHeight
         }
 
+        // Assigning back to relational positioning
         if (bgTop > 25 && fixedAd.classList.contains('fixed')) {
-          fixedAd.classList.remove('fixed');
-          fixedAd.style.top = 'initial';
-          fixedAd.style.left = 'initial';
-          fixedAd.style.bottom = 'initial';
-          fixedAd.style.position = 'relative';
-          fixedAd.style.width = 'initial';
-          fixedAd.style.height = '100%';
+          fixedAd.classList.remove('fixed')
+          fixedAd.style.top = 'initial'
+          fixedAd.style.left = 'initial'
+          fixedAd.style.bottom = 'initial'
+          fixedAd.style.position = 'relative'
+          fixedAd.style.width = 'initial'
+          fixedAd.style.height = '100%'
         }
 
-
+        // Scroll down and get to the bottom
         if (isUnderBottom && fixedAd.style.position !== 'absolute') {
-          let getCurrentTop = postBottom + window.pageYOffset - adHeight + 'px';
-          let getCurrentLeft = adLeft + 'px';
-          let getCurrentWidth = adWidth + 'px';
-          let getCurrentHeight = adHeight + 'px';
-          fixedAd.classList.remove('fixed');
-          fixedAd.style.position = 'absolute';
-          fixedAd.style.top = getCurrentTop;
-          fixedAd.style.left = getCurrentLeft;
-          fixedAd.style.width = getCurrentWidth;
-          fixedAd.style.height = getCurrentHeight;
+          let getCurrentTop = postBottom + window.pageYOffset - adHeight + 'px'
+          let getCurrentLeft = adLeft + 'px'
+          let getCurrentWidth = adWidth + 'px'
+          let getCurrentHeight = adHeight + 'px'
+          fixedAd.classList.remove('fixed')
+          fixedAd.style.position = 'absolute'
+          fixedAd.style.top = getCurrentTop
+          fixedAd.style.left = getCurrentLeft
+          fixedAd.style.width = getCurrentWidth
+          fixedAd.style.height = getCurrentHeight
         }
       },
       addPostAd () {
-        const ps = document.querySelectorAll('p');
+        const ps = document.querySelectorAll('p')
         for (const p in ps) {
           const ad = document.createElement('div')
           ad.classList.add('ad--post-body')
