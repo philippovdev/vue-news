@@ -15,6 +15,11 @@
     mounted () {
       this.scroll();
       this.addPostAd();
+
+      window.addEventListener('scroll', () => {
+        this.setFixed();
+      })
+
     },
     async asyncData (context) {
       if (context.payload) {
@@ -52,6 +57,58 @@
       SinglePost
     },
     methods: {
+      setFixed() {
+        let navHeight = document.querySelector('.the-header').offsetHeight;
+        let fixedAd = document.querySelector('.post__ad-1-3.ad--side');
+        let adPosition = fixedAd.getBoundingClientRect();
+        let adTop = adPosition.top;
+        let adLeft = adPosition.left;
+        let adWidth = adPosition.width;
+        let adHeight = adPosition.height;
+        let adBottom = adPosition.bottom;
+        let bg = document.querySelector('.post__bg');
+        let bgPosition = bg.getBoundingClientRect();
+        let bgTop = bgPosition.top - navHeight;
+        let postBottom = document.querySelector('.post__content').getBoundingClientRect().bottom;
+        let isUnderBottom = postBottom <= adBottom;
+
+        console.log(isUnderBottom);
+
+        if (bgTop <= 25 && !fixedAd.classList.contains('fixed') && !isUnderBottom && fixedAd.style.position !== 'absolute') {
+          let getCurrentLeft = adLeft + 'px';
+          let getCurrentWidth = adWidth + 'px';
+          let getCurrentHeight = adHeight + 'px';
+          fixedAd.classList.add('fixed');
+          fixedAd.style.top = navHeight + 25 + 'px';
+          fixedAd.style.left = getCurrentLeft;
+          fixedAd.style.width = getCurrentWidth;
+          fixedAd.style.height = getCurrentHeight;
+        }
+
+        if (bgTop > 25 && fixedAd.classList.contains('fixed')) {
+          fixedAd.classList.remove('fixed');
+          fixedAd.style.top = 'initial';
+          fixedAd.style.left = 'initial';
+          fixedAd.style.bottom = 'initial';
+          fixedAd.style.position = 'relative';
+          fixedAd.style.width = 'initial';
+          fixedAd.style.height = '100%';
+        }
+
+
+        if (isUnderBottom && fixedAd.style.position !== 'absolute') {
+          let getCurrentTop = postBottom + window.pageYOffset - adHeight + 'px';
+          let getCurrentLeft = adLeft + 'px';
+          let getCurrentWidth = adWidth + 'px';
+          let getCurrentHeight = adHeight + 'px';
+          fixedAd.classList.remove('fixed');
+          fixedAd.style.position = 'absolute';
+          fixedAd.style.top = getCurrentTop;
+          fixedAd.style.left = getCurrentLeft;
+          fixedAd.style.width = getCurrentWidth;
+          fixedAd.style.height = getCurrentHeight;
+        }
+      },
       addPostAd () {
         const ps = document.querySelectorAll('p');
         for (const p in ps) {

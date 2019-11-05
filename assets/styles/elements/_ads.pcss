@@ -53,6 +53,12 @@
     text-align: center;
     position: relative;
     height: 100%;
+    width: 300px;
+
+    &.fixed {
+      position: fixed;
+      width: 350px;
+    }
 
     &::before {
       content: 'G-ADS';
@@ -121,5 +127,8 @@
       font-size: .8rem;
       left: 0;
     }
+  }
+  &--post-body::after {
+    top: -23px;
   }
 }

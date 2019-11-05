@@ -3,7 +3,7 @@
     <div class="post__ad ad--top"></div>
     <h1 class="post__title" v-html="title"></h1>
     <div class="post__hero">
-      <div class="post__bg" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+      <div class="post__bg"  v-lazy:background-image="image"></div>
       <div class="post__ad-1-3 ad--side"></div>
     </div>
     <div class="post__details">

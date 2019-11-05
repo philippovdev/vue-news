@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugins/vue-lazyload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -375,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572848777824</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Vue-lazyload added to post previews">
+      <created>1572850273022</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1572850273022</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added more posts upload" />
     <MESSAGE value="More posts load button with saving posts in vuex store" />
     <MESSAGE value="Added dynamic menu links from categories" />
     <MESSAGE value="Created separated drawer for categories pages" />
@@ -420,6 +426,7 @@
     <MESSAGE value="Adding g-ads to main page and category page" />
     <MESSAGE value="G-adds added for main and category page" />
     <MESSAGE value="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10" />
+    <MESSAGE value="Vue-lazyload added to post previews" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue-lazyload added to post previews" />
   </component>
 </project>

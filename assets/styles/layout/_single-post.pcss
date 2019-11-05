@@ -43,8 +43,11 @@
       display: block;
     }
   }
+  &__content {
+    width: 600px;
+    margin-left: 0;
+  }
   &__bg {
-    flex-basis: 60%;
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,15 +83,11 @@
   }
   &__content {
     text-align: left;
-    padding: 3rem;
     line-height: 1.6rem;
 
     @mixin medium {
-      padding: 1rem 3rem;
     }
     @mixin atMedium {
-      max-width: 600px;
-      margin: 0 auto;
     }
   }
 
