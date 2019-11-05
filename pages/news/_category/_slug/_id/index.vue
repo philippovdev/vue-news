@@ -13,7 +13,8 @@
   import SinglePost from '@/components/Posts/SinglePost'
   export default {
     mounted () {
-      this.scroll()
+      this.scroll();
+      this.addPostAd();
     },
     async asyncData (context) {
       if (context.payload) {
@@ -50,6 +51,19 @@
       SinglePost
     },
     methods: {
+      addPostAd () {
+        const ps = document.querySelectorAll('p');
+        for (const p in ps) {
+          const ad = document.createElement('div')
+          ad.classList.add('ad--post-body')
+          if (+p === 4 && ps.length >= 10) {
+            this.insertAfter(ad, ps[p])
+          }
+        }
+      },
+      insertAfter (el, referenceNode) {
+        referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling)
+      },
       scroll () {
         window.onscroll = () => {
           let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight + 1) >= document.documentElement.offsetHeight

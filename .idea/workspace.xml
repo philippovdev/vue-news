@@ -34,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="PostCSS File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -346,7 +346,35 @@
       <option name="project" value="LOCAL" />
       <updated>1572785497907</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Deleted console from master">
+      <created>1572785779061</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1572785779061</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adding g-ads to main page and category page">
+      <created>1572793152029</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572793152029</updated>
+    </task>
+    <task id="LOCAL-00031" summary="G-adds added for main and category page">
+      <created>1572803698438</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572803698438</updated>
+    </task>
+    <task id="LOCAL-00032" summary="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10">
+      <created>1572848777824</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572848777824</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,10 +394,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug of wrong routing construction for categories" />
-    <MESSAGE value="Added background-image to post" />
-    <MESSAGE value="Changed bg for main page" />
-    <MESSAGE value="fixes" />
     <MESSAGE value="Added more posts upload" />
     <MESSAGE value="More posts load button with saving posts in vuex store" />
     <MESSAGE value="Added dynamic menu links from categories" />
@@ -391,6 +415,10 @@
     <MESSAGE value="Infinite pagination added for main and category" />
     <MESSAGE value="Fixing infinite loading for the main page and category" />
     <MESSAGE value="httpS fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="httpS fix" />
+    <MESSAGE value="Deleted console from master" />
+    <MESSAGE value="Adding g-ads to main page and category page" />
+    <MESSAGE value="G-adds added for main and category page" />
+    <MESSAGE value="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10" />
   </component>
 </project>
