@@ -19,12 +19,21 @@
       insertAfter (el, referenceNode) {
         referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling)
       },
+      clearAds () {
+        const allAds = document.querySelectorAll('.ad--feed');
+        for (let ad of allAds) {
+          console.log(allAds);
+          ad.remove();
+        }
+      },
       scroll () {
         window.onscroll = () => {
           let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight + 1) >= document.documentElement.offsetHeight
           if (bottomOfWindow) {
             this.$nuxt.$loading.start()
             this.loadNewPosts()
+            this.clearAds()
+            this.addAds()
             this.$nuxt.$loading.finish()
           }
         }

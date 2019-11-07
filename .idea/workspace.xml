@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -393,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573017497517</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Saved fixed ad prior changes">
+      <created>1573102360966</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1573102360966</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created separated drawer for categories pages" />
     <MESSAGE value="Categories upload and single post load fixed" />
     <MESSAGE value="Fixed problem with wrong posts id's on initial page" />
     <MESSAGE value="Fixed wrong behaviour of html symbols in titles and main text" />
@@ -438,6 +445,7 @@
     <MESSAGE value="Vue-lazyload added to post previews" />
     <MESSAGE value="Scroll-up-n-down added" />
     <MESSAGE value="Keep on working on floating ads block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Keep on working on floating ads block" />
+    <MESSAGE value="Saved fixed ad prior changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saved fixed ad prior changes" />
   </component>
 </project>
