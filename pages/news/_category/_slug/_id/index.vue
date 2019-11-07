@@ -17,7 +17,7 @@
       this.scroll()
       this.addPostAd()
 
-      let fixedAdBlock = document.querySelector('.post__ad-1-3.ad--side')
+      let fixedAd = document.querySelector('.post__ad-1-3.ad--side')
 
       let lastScrollTop = 0
 
@@ -26,33 +26,33 @@
         let st = window.pageYOffset || document.documentElement.scrollTop // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
         if (st > lastScrollTop) {
           // downscroll code
-          fixedAdBlock.classList.remove('up')
+          fixedAd.classList.remove('up')
         } else {
           // upscroll code
-          fixedAdBlock.classList.add('up')
+          fixedAd.classList.add('up')
         }
         lastScrollTop = st <= 0 ? 0 : st // For Mobile or negative scrolling
       }, false)
 
       window.addEventListener('resize', () => {
-
         if (window.innerWidth > 844) {
-          console.log('greater');
           this.setFixed()
         } else {
-          console.log('smaler');
-          fixedAdBlock.classList.remove('fixed')
-          fixedAdBlock.style.top = 'initial'
-          fixedAdBlock.style.left = 'initial'
-          fixedAdBlock.style.bottom = 'initial'
-          fixedAdBlock.style.position = 'initial'
-          fixedAdBlock.style.width = 'initial'
-          fixedAdBlock.style.height = '100%'
+          fixedAd.classList.remove('fixed')
+          fixedAd.style.top = 'initial'
+          fixedAd.style.left = 'initial'
+          fixedAd.style.bottom = 'initial'
+          fixedAd.style.position = 'initial'
+          fixedAd.style.width = 'initial'
+          fixedAd.style.height = '100%'
         }
       })
       window.addEventListener('DOMContentLoaded', () => {
-        this.setFixed()
+        if (window.innerWidth > 844) {
+          this.setFixed()
+        }
       })
+
     },
     async asyncData (context) {
       if (context.payload) {
@@ -91,87 +91,89 @@
     },
     methods: {
       setFixed () {
-        let navHeight = document.querySelector('.the-header').offsetHeight
-        let fixedAd = document.querySelector('.post__ad-1-3.ad--side')
-        let adPosition = fixedAd.getBoundingClientRect()
-        let adTop = adPosition.top
-        let adLeft = adPosition.left
-        let adWidth = adPosition.width
-        let adHeight = adPosition.height
-        let adBottom = adPosition.bottom
-        let bg = document.querySelector('.post__bg')
-        let bgPosition = bg.getBoundingClientRect()
-        let bgTop = bgPosition.top - navHeight
-        let postBottom = document.querySelector('.post__content').getBoundingClientRect().bottom
-        let isUnderBottom = postBottom <= adBottom
-        let scrollUp = fixedAd.classList.contains('up')
-        let isAbsolute = fixedAd.style.position === 'absolute'
-        let isRelative = fixedAd.style.position === 'relative'
-        let isInitial = fixedAd.style.position === 'initial'
-        let isFixed = fixedAd.classList.contains('fixed')
 
-        console.log({
-          'isAbsolute': isAbsolute,
-          'isFixed': isFixed,
-          'isRelative': isRelative,
-          'adTop': adTop,
-          'position': fixedAd.style.position
-        })
+        if (window.innerWidth > 844) {
+          let navHeight = document.querySelector('.the-header').offsetHeight
+          let fixedAd = document.querySelector('.post__ad-1-3.ad--side')
+          let adPosition = fixedAd.getBoundingClientRect()
+          let adTop = adPosition.top
+          let adLeft = adPosition.left
+          let adWidth = adPosition.width
+          let adHeight = adPosition.height
+          let adBottom = adPosition.bottom
+          let bg = document.querySelector('.post__bg')
+          let bgPosition = bg.getBoundingClientRect()
+          let bgTop = bgPosition.top - navHeight
+          let postBottom = document.querySelector('.post__content').getBoundingClientRect().bottom
+          let isUnderBottom = postBottom <= adBottom
+          let scrollUp = fixedAd.classList.contains('up')
+          let isAbsolute = fixedAd.style.position === 'absolute'
+          let isRelative = fixedAd.style.position === 'relative'
+          let isInitial = fixedAd.style.position === 'initial'
+          let isFixed = fixedAd.classList.contains('fixed')
 
-        const setFixed = () => {
-          let getCurrentLeft = adLeft + 'px'
-          let getCurrentWidth = adWidth + 'px'
-          let getCurrentHeight = adHeight + 'px'
-          fixedAd.style.position = 'fixed'
-          fixedAd.classList.add('fixed')
-          fixedAd.style.top = navHeight + 25 + 'px'
-          fixedAd.style.left = getCurrentLeft
-          fixedAd.style.width = getCurrentWidth
-          fixedAd.style.height = getCurrentHeight
+          console.log({
+            'isAbsolute': isAbsolute,
+            'isFixed': isFixed,
+            'isRelative': isRelative,
+            'adTop': adTop,
+            'position': fixedAd.style.position
+          })
+
+          const setFixed = () => {
+            let getCurrentLeft = adLeft + 'px'
+            let getCurrentWidth = adWidth + 'px'
+            let getCurrentHeight = adHeight + 'px'
+            fixedAd.style.position = 'fixed'
+            fixedAd.classList.add('fixed')
+            fixedAd.style.top = navHeight + 25 + 'px'
+            fixedAd.style.left = getCurrentLeft
+            fixedAd.style.width = getCurrentWidth
+            fixedAd.style.height = getCurrentHeight
+          }
+
+          const setAbsolute = () => {
+            let getCurrentTop = postBottom + window.pageYOffset - adHeight + 'px'
+            let getCurrentLeft = adLeft + 'px'
+            let getCurrentWidth = adWidth + 'px'
+            let getCurrentHeight = adHeight + 'px'
+            fixedAd.classList.remove('fixed')
+            fixedAd.style.position = 'absolute'
+            fixedAd.style.top = getCurrentTop
+            fixedAd.style.left = getCurrentLeft
+            fixedAd.style.width = getCurrentWidth
+            fixedAd.style.height = getCurrentHeight
+          }
+
+          const setInitial = () => {
+            fixedAd.classList.remove('fixed')
+            fixedAd.style.top = 'initial'
+            fixedAd.style.left = 'initial'
+            fixedAd.style.bottom = 'initial'
+            fixedAd.style.position = 'initial'
+            fixedAd.style.width = 'initial'
+            fixedAd.style.height = '100%'
+          }
+
+          if (bgTop >= 25 && isInitial && scrollUp) {
+            fixedAd.style.position = 'relative'
+          }
+
+          if (bgTop <= 25 && !isFixed && !isUnderBottom && !isAbsolute && !scrollUp) {
+            setFixed()
+          }
+
+          if (isUnderBottom && !isAbsolute) {
+            setAbsolute()
+          }
+
+          if (adTop > 85 && scrollUp && isAbsolute) {
+            setFixed()
+          }
+          if (bgTop >= 25 && isFixed && !isUnderBottom && !isAbsolute && scrollUp) {
+            setInitial()
+          }
         }
-
-        const setAbsolute = () => {
-          let getCurrentTop = postBottom + window.pageYOffset - adHeight + 'px'
-          let getCurrentLeft = adLeft + 'px'
-          let getCurrentWidth = adWidth + 'px'
-          let getCurrentHeight = adHeight + 'px'
-          fixedAd.classList.remove('fixed')
-          fixedAd.style.position = 'absolute'
-          fixedAd.style.top = getCurrentTop
-          fixedAd.style.left = getCurrentLeft
-          fixedAd.style.width = getCurrentWidth
-          fixedAd.style.height = getCurrentHeight
-        }
-
-        const setInitial = () => {
-          fixedAd.classList.remove('fixed')
-          fixedAd.style.top = 'initial'
-          fixedAd.style.left = 'initial'
-          fixedAd.style.bottom = 'initial'
-          fixedAd.style.position = 'initial'
-          fixedAd.style.width = 'initial'
-          fixedAd.style.height = '100%'
-        }
-
-        if (bgTop >= 25 && isInitial && scrollUp) {
-          fixedAd.style.position = 'relative'
-        }
-
-        if (bgTop <= 25 && !isFixed && !isUnderBottom && !isAbsolute && !scrollUp) {
-          setFixed()
-        }
-
-        if (isUnderBottom && !isAbsolute) {
-          setAbsolute()
-        }
-
-        if (adTop > 85 && scrollUp && isAbsolute) {
-          setFixed()
-        }
-        if (bgTop >= 25 && isFixed && !isUnderBottom && !isAbsolute && scrollUp) {
-          setInitial()
-        }
-
       },
       addPostAd () {
         const ps = document.querySelectorAll('p')
