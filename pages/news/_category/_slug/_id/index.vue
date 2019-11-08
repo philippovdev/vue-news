@@ -65,6 +65,23 @@
       insertAfter (el, referenceNode) {
         referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling)
       },
+      /*      scroll () {
+              window.onscroll = () => {
+                let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight + 1) >= document.documentElement.offsetHeight
+                if (bottomOfWindow) {
+                  this.$nuxt.$loading.start()
+                  this.addNextPost()
+                  this.$nuxt.$loading.finish()
+                }
+              }*/
+    },
+    addNextPost () {
+      this.$axios.get(this.$store.getters.getNextPost)
+        .then(res => {
+          this.$store.commit('setPostsByCategory', [...this.$store.getters.getPostsByCategory, ...res.data.data])
+          this.$store.commit('setNextCategoryPage', res.data['next_page_url'])
+          this.categoryPosts = this.$store.getters.getPostsByCategory
+        })
     },
     addNextPost () {
       this.$axios.get(this.$store.getters.getNextPost)

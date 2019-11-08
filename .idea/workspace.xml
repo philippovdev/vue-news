@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
@@ -17,6 +18,7 @@
       <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/ga.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="news/adsense-fix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -356,14 +358,63 @@
       <option name="project" value="LOCAL" />
       <updated>1572785497907</updated>
     </task>
-    <task id="LOCAL-00029" summary="Google analytics added">
-      <created>1573200770323</created>
+    <task id="LOCAL-00029" summary="Deleted console from master">
+      <created>1572785779061</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1573200770323</updated>
+      <updated>1572785779061</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Adding g-ads to main page and category page">
+      <created>1572793152029</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1572793152029</updated>
+    </task>
+    <task id="LOCAL-00031" summary="G-adds added for main and category page">
+      <created>1572803698438</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572803698438</updated>
+    </task>
+    <task id="LOCAL-00032" summary="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10">
+      <created>1572848777824</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1572848777824</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Vue-lazyload added to post previews">
+      <created>1572850273022</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1572850273022</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Scroll-up-n-down added">
+      <created>1572984415368</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1572984415368</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Keep on working on floating ads block">
+      <created>1573017497517</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1573017497517</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Saved fixed ad prior changes">
+      <created>1573102360966</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1573102360966</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,13 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added background-image to post" />
-    <MESSAGE value="Changed bg for main page" />
-    <MESSAGE value="fixes" />
-    <MESSAGE value="Added more posts upload" />
-    <MESSAGE value="More posts load button with saving posts in vuex store" />
-    <MESSAGE value="Added dynamic menu links from categories" />
-    <MESSAGE value="Created separated drawer for categories pages" />
     <MESSAGE value="Categories upload and single post load fixed" />
     <MESSAGE value="Fixed problem with wrong posts id's on initial page" />
     <MESSAGE value="Fixed wrong behaviour of html symbols in titles and main text" />
@@ -407,7 +451,15 @@
     <MESSAGE value="Infinite pagination added for main and category" />
     <MESSAGE value="Fixing infinite loading for the main page and category" />
     <MESSAGE value="httpS fix" />
-    <MESSAGE value="Google analytics added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Google analytics added" />
+    <MESSAGE value="Deleted console from master" />
+    <MESSAGE value="Adding g-ads to main page and category page" />
+    <MESSAGE value="G-adds added for main and category page" />
+    <MESSAGE value="G-adds added to single post after each 4th paragraph if overall paragraph's length is greater than 10" />
+    <MESSAGE value="Vue-lazyload added to post previews" />
+    <MESSAGE value="Scroll-up-n-down added" />
+    <MESSAGE value="Keep on working on floating ads block" />
+    <MESSAGE value="Saved fixed ad prior changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Saved fixed ad prior changes" />
+
   </component>
 </project>
