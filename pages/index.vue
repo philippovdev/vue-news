@@ -3,8 +3,6 @@
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <div class="ad--top"></div>
     <PostList :posts="loadedPosts"/>
-    <!--<button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
-    <div class="ad--bottom"></div>
   </div>
 </template>
 
