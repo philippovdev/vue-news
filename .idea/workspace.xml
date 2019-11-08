@@ -3,9 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/PostPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/PostPreview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/ga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/index.js" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -447,5 +460,6 @@
     <MESSAGE value="Keep on working on floating ads block" />
     <MESSAGE value="Saved fixed ad prior changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Saved fixed ad prior changes" />
+
   </component>
 </project>

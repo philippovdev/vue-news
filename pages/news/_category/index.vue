@@ -7,7 +7,6 @@
       <!--      <button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
       <span class="btn__load-more"></span>
     </div>
-    <div class="ad--bottom"></div>
   </div>
 </template>
 

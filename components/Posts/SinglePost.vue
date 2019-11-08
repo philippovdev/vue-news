@@ -6,10 +6,6 @@
       <div class="post__bg"  v-lazy:background-image="image"></div>
       <div class="post__ad-1-3 ad--side"></div>
     </div>
-    <div class="post__details">
-      <!--<div class="post-detail">Last updated on {{ loadedPost.updatedDate | date }}</div>
-      <div class="post-detail">Written by {{ loadedPost.author }}</div>-->
-    </div>
     <div class="post__content" v-html="text"></div>
     <a :href="source" target="_blank" class="text-center">Source of origin: {{ sourceName }}</a>
     <div class="post__ad ad--bottom"></div>

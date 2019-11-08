@@ -3,7 +3,6 @@
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <div class="ad--top"></div>
     <PostList :posts="loadedPosts"/>
-    <div class="ad--bottom"></div>
   </div>
 </template>
 
