@@ -23,9 +23,9 @@ module.exports = {
     ],
     script: [
       {
+        "data-ad-client": "ca-pub-6228577781902066",
         async: true,
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        'data-ad-client': 'ca-pub-6228577781902066'
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       }
     ],
     link: [
