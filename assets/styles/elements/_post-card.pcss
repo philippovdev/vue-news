@@ -30,6 +30,16 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    &[lazy=loading] { // todo create lazy-load styling for thumbnail
+      background-color: #cccccc;
+      /*your style here*/
+    }
+    &[lazy=error] {
+      /*your style here*/
+    }
+    &[lazy=loaded] {
+      /*your style here*/
+    }
 
     .post__category-box {
       position: absolute;

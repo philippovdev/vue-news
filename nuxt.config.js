@@ -53,21 +53,14 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '~plugins/core-components.js',
-    '~plugins/date-filter.js',
-    '~plugins/filters.js',
-    {
-      src: '~plugins/ga.js', mode: 'client'
-    }
-  ],
+  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/vue-lazyload.js'],
 
   /*
   ** Nuxt.js modules
   */
   modules: ['@nuxtjs/axios'],
   axios: {
-    baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/12',
+    baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
   },
 
@@ -125,7 +118,7 @@ module.exports = {
   generate: {
     routes: function () {
       return axios
-        .get('https://admin.lova.news/200')
+        .get('https://admin.lova.news/news/200')
         .then(res => {
           const routes = []
           for (const key in res.data) {

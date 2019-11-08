@@ -3,7 +3,7 @@
       <article>
         <div
           class="post-preview__thumbnail"
-          :style="{backgroundImage: 'url(' + image + ')'}">
+          v-lazy:background-image="image">
           <span class="post__category-box">{{ category }}</span>
           <span class="post__category-overlay"></span>
         </div>
