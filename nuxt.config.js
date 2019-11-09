@@ -83,6 +83,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: process.env.PUBLIC_PATH,
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -116,7 +117,7 @@ module.exports = {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://lova.news/',
+    baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
   },
   transition: {
@@ -124,7 +125,7 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
-    base: '',
+    base: '/',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
