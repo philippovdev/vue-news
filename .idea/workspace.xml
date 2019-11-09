@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,7 +144,7 @@
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
       <workItem from="1572284549232" duration="57088000" />
-      <workItem from="1573299839659" duration="17401000" />
+      <workItem from="1573299839659" duration="17681000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -462,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573339269870</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="[v/4 - _nuxt in base url] - changed router position] All working on dev, initial router handling">
+      <created>1573339526257</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1573339526257</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed problem with wrong posts id's on initial page" />
     <MESSAGE value="Fixed wrong behaviour of html symbols in titles and main text" />
     <MESSAGE value="Added meta titles and css folders" />
     <MESSAGE value="Added filters to uppercase first letter in nav menu" />
@@ -507,6 +512,7 @@
     <MESSAGE value="[v/1 - changed router position] All working on dev, initial router handling" />
     <MESSAGE value="[v/2] - changed router position] All working on dev, initial router handling" />
     <MESSAGE value="[v/3 - just slash without dot] - changed router position] All working on dev, initial router handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="[v/3 - just slash without dot] - changed router position] All working on dev, initial router handling" />
+    <MESSAGE value="[v/4 - _nuxt in base url] - changed router position] All working on dev, initial router handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="[v/4 - _nuxt in base url] - changed router position] All working on dev, initial router handling" />
   </component>
 </project>
