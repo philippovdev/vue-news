@@ -5,6 +5,11 @@ const axios = require('axios')
 const postcssCustomMedia = require('postcss-custom-media');
 
 module.exports = {
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-74645070-2'
+    }]
+  ],
   mode: 'universal',
 
   /*
