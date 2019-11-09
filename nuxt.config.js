@@ -2,7 +2,7 @@ const pkg = require('./package')
 const bodyParser = require('body-parser')
 const axios = require('axios')
 
-const postcssCustomMedia = require('postcss-custom-media');
+const postcssCustomMedia = require('postcss-custom-media')
 
 module.exports = {
   buildModules: [
@@ -28,9 +28,9 @@ module.exports = {
     ],
     script: [
       {
-        "data-ad-client": "ca-pub-6228577781902066",
+        'data-ad-client': 'ca-pub-6228577781902066',
         async: true,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
       }
     ],
     link: [
@@ -83,7 +83,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -100,7 +99,7 @@ module.exports = {
             'last 2 versions',
             'ie >= 11',
           ],
-        'cssnano': { preset: 'default' },
+          'cssnano': { preset: 'default' },
         },
       },
       preset: {
@@ -117,7 +116,7 @@ module.exports = {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
+    baseUrl: process.env.BASE_URL || 'https://lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
   },
   transition: {
@@ -125,6 +124,7 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
+    base: '',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
