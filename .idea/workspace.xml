@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/styles/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/animations/_animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_btn.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_post-list.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_post-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/mixins/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/variables/_variables.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/variables/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +62,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -130,7 +146,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="57e26b81-19d7-4a76-b919-c96796aa4733" name="Default Changelist" comment="" />
+      <changelist id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="" />
       <created>1570890804795</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -145,6 +161,7 @@
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
       <workItem from="1572284549232" duration="57088000" />
+      <workItem from="1573299839659" duration="8204000" />
     </task>
     <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
       <created>1571565254626</created>
@@ -356,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573237064312</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="After crash fix">
+      <created>1573300012714</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1573300012714</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
