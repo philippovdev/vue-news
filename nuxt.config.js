@@ -73,11 +73,6 @@ module.exports = {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
   },
-
-
-  router: {
-    base: '/'
-  },
   /*
   ** Build configuration
   */
@@ -123,6 +118,7 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
+    base: './',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
