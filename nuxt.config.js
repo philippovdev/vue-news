@@ -77,6 +77,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extend (config, { isDev }) {
+      if (!isDev) {
+        config.output.publicPath = './'
+      }
+    },
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -118,7 +123,7 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
-    base: '_nuxt/',
+    base: '/',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
