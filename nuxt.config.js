@@ -83,7 +83,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '/',
+    publicPath: 'https://lova.news/',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -125,7 +125,7 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
-    base: 'https://lova.news/',
+    base: 'https://lova.news',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
