@@ -79,7 +79,7 @@ module.exports = {
   build: {
     extend (config, { isDev }) {
       if (!isDev) {
-        config.output.publicPath = './'
+        config.output.publicPath = './_nuxt/'
       }
     },
     postcss: {
