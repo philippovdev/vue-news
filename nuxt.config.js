@@ -117,7 +117,7 @@ module.exports = {
     }
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
+    baseUrl: process.env.BASE_URL || 'https://lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
   },
   transition: {
