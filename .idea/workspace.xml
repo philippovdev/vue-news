@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="" />
+    <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -62,13 +67,13 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Andrew\Desktop\news\assets\images" />
       <recent name="C:\Users\Andrew\Desktop\news\static" />
       <recent name="C:\Users\Andrew\Desktop\news" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
     </key>
   </component>
   <component name="RunDashboard">
