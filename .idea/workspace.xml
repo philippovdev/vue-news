@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/mixins/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/variables/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/animations/_animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_btn.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_post-list.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_post-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/variables/_variables.pcss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/_slug/_id/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/ga.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +79,11 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1S6jBbWsczFWv8nU69CfsW39gN8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="PostCSS" />
@@ -442,6 +470,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added text limiter and titles to home and categories" />
     <MESSAGE value="Meta title added to categories" />
     <MESSAGE value="Added category label to card" />

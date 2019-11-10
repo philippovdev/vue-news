@@ -48,23 +48,27 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~assets/styles/main.css'],
+  css: [
+    '@/assets/styles/main.scss'
+  ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '~plugins/core-components.js',
-    '~plugins/date-filter.js',
-    '~plugins/filters.js',
-    '~plugins/vue-lazyload.js',
-    { src: '~plugins/ga.js', mode: 'client' }
-  ],
+  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/vue-lazyload.js'],
 
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/axios'],
+  modules: [
+    ['@nuxtjs/axios'],
+    [
+      'nuxt-sass-resources-loader',
+      [
+        'assets/styles/main.scss'
+      ]
+    ],
+  ],
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
