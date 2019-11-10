@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plugins/vue-lazyload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
@@ -124,6 +124,7 @@
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +133,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="" />
+      <changelist id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="" />
       <created>1570890804795</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -147,7 +148,14 @@
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
       <workItem from="1572284549232" duration="57088000" />
-      <workItem from="1573299839659" duration="19305000" />
+      <workItem from="1573388526344" duration="184000" />
+    </task>
+    <task id="LOCAL-00001" summary="Basic functional is alive and ready to go">
+      <created>1571565254626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571565254626</updated>
     </task>
     <task id="LOCAL-00002" summary="Basic functional is alive and ready to go">
       <created>1571572709279</created>
@@ -345,154 +353,7 @@
       <option name="project" value="LOCAL" />
       <updated>1573200770323</updated>
     </task>
-    <task id="LOCAL-00030" summary="After crash fix">
-      <created>1573237064312</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1573237064312</updated>
-    </task>
-    <task id="LOCAL-00031" summary="After crash fix">
-      <created>1573300012714</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1573300012714</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Changed to scss">
-      <created>1573330175539</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1573330175539</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Google analytics added">
-      <created>1573331156821</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1573331156821</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Changes in env url">
-      <created>1573333135905</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1573333135905</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Changes in env url">
-      <created>1573333166976</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1573333166976</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Changes in env url">
-      <created>1573333226841</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1573333226841</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Changes in env url">
-      <created>1573333635988</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1573333635988</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Changes in env url">
-      <created>1573334291664</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1573334291664</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Changes in env url 1">
-      <created>1573335630626</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1573335630626</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Changes in env url 1">
-      <created>1573336167636</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1573336167636</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Changes in env url 1">
-      <created>1573336431169</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1573336431169</updated>
-    </task>
-    <task id="LOCAL-00042" summary="All working on dev, initial router handling">
-      <created>1573338692442</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1573338692442</updated>
-    </task>
-    <task id="LOCAL-00043" summary="[v/1 - changed router position] All working on dev, initial router handling">
-      <created>1573338908570</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1573338908570</updated>
-    </task>
-    <task id="LOCAL-00044" summary="[v/2] - changed router position] All working on dev, initial router handling">
-      <created>1573339081616</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1573339081616</updated>
-    </task>
-    <task id="LOCAL-00045" summary="[v/3 - just slash without dot] - changed router position] All working on dev, initial router handling">
-      <created>1573339269870</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1573339269870</updated>
-    </task>
-    <task id="LOCAL-00046" summary="[v/4 - _nuxt in base url] - changed router position] All working on dev, initial router handling">
-      <created>1573339526257</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1573339526257</updated>
-    </task>
-    <task id="LOCAL-00047" summary="[v/5 - public path added] - changed router position] All working on dev, initial router handling">
-      <created>1573339808329</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1573339808329</updated>
-    </task>
-    <task id="LOCAL-00048" summary="[v/6 - public path added ./_nuxt/] - changed router position] All working on dev, initial router handling">
-      <created>1573339997215</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1573339997215</updated>
-    </task>
-    <task id="LOCAL-00049" summary="[v/7 - public path added ''] - changed router position] All working on dev, initial router handling">
-      <created>1573368176954</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1573368176954</updated>
-    </task>
-    <task id="LOCAL-00050" summary="[v/8 - public path added '' | deleted basic: '/'] - changed router position] All working on dev, initial router handling">
-      <created>1573369074480</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1573369074481</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,6 +362,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -509,6 +395,11 @@
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -526,17 +417,6 @@
     <MESSAGE value="After crash fix" />
     <MESSAGE value="Changed to scss" />
     <MESSAGE value="Google analytics added" />
-    <MESSAGE value="Changes in env url" />
-    <MESSAGE value="Changes in env url 1" />
-    <MESSAGE value="All working on dev, initial router handling" />
-    <MESSAGE value="[v/1 - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/2] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/3 - just slash without dot] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/4 - _nuxt in base url] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/5 - public path added] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/6 - public path added ./_nuxt/] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/7 - public path added ''] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/8 - public path added '' | deleted basic: '/'] - changed router position] All working on dev, initial router handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="[v/8 - public path added '' | deleted basic: '/'] - changed router position] All working on dev, initial router handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google analytics added" />
   </component>
 </project>
