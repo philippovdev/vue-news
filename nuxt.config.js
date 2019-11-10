@@ -53,7 +53,13 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/vue-lazyload.js'],
+  plugins: [
+    '~plugins/core-components.js',
+    '~plugins/date-filter.js',
+    '~plugins/filters.js',
+    '~plugins/vue-lazyload.js',
+    { src: '~plugins/ga.js', mode: 'client' }
+  ],
 
   /*
   ** Nuxt.js modules

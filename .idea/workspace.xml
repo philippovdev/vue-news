@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/mixins/_mixins.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/styles/variables/_variables.pcss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/ga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/animations/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/animations/_animations.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/base/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/base/_grid.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_btn.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_post-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_post-card.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_post-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_post-list.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/navigation/_side-nav.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/mixins/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/typography/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/typography/_typography.pcss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/variables/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/vue-lazyload.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/vue-lazyload.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
