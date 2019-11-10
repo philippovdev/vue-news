@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   max-width: 1600px;
-  @mixin medium {
+  @include respond(tab-port) {
     width: 95%;
   }
   margin: 0 auto;

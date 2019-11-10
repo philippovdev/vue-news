@@ -48,7 +48,9 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['~assets/styles/main.css'],
+  css: [
+    '@/assets/styles/main.scss'
+  ],
 
   /*
   ** Plugins to load before mounting the App
@@ -58,17 +60,24 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/axios'],
+  modules: [
+    ['@nuxtjs/axios'],
+    [
+      'nuxt-sass-resources-loader',
+      [
+        'assets/styles/main.scss'
+      ]
+    ],
+  ],
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
   },
-
   /*
   ** Build configuration
   */
   build: {
-    publicPath: '',
+    // publicPath: '',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn

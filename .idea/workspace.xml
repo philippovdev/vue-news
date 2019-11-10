@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="7fb1f8ec-f5b1-47e9-a0ec-6b2a0ea2e838" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,14 @@
       <workItem from="1572186310694" duration="2800000" />
       <workItem from="1572231681149" duration="2644000" />
       <workItem from="1572284549232" duration="57088000" />
-      <workItem from="1573299839659" duration="20016000" />
+      <workItem from="1573299839659" duration="19305000" />
+    </task>
+    <task id="LOCAL-00002" summary="Basic functional is alive and ready to go">
+      <created>1571572709279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571572709279</updated>
     </task>
     <task id="LOCAL-00003" summary="Fixed bug of wrong routing construction for categories">
       <created>1571593743343</created>
@@ -483,14 +487,7 @@
       <option name="project" value="LOCAL" />
       <updated>1573369074481</updated>
     </task>
-    <task id="LOCAL-00051" summary="[v/9 - public path removed] - changed router position] All working on dev, initial router handling">
-      <created>1573369265838</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1573369265838</updated>
-    </task>
-    <option name="localTasksCounter" value="52" />
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,6 +507,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added text limiter and titles to home and categories" />
     <MESSAGE value="Meta title added to categories" />
     <MESSAGE value="Added category label to card" />
     <MESSAGE value="Mobile styles for main page and post added" />
@@ -534,7 +532,6 @@
     <MESSAGE value="[v/6 - public path added ./_nuxt/] - changed router position] All working on dev, initial router handling" />
     <MESSAGE value="[v/7 - public path added ''] - changed router position] All working on dev, initial router handling" />
     <MESSAGE value="[v/8 - public path added '' | deleted basic: '/'] - changed router position] All working on dev, initial router handling" />
-    <MESSAGE value="[v/9 - public path removed] - changed router position] All working on dev, initial router handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="[v/9 - public path removed] - changed router position] All working on dev, initial router handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="[v/8 - public path added '' | deleted basic: '/'] - changed router position] All working on dev, initial router handling" />
   </component>
 </project>

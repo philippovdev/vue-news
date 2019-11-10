@@ -1,13 +1,14 @@
 .ad {
   &--feed {
     box-shadow: 1px 1px 5px #ccc;
-    width: 100%;
     background-color: #cccccc;
     border-radius: 4px;
     overflow: hidden;
     height: 400px;
     transition: transform .2s;
     position: relative;
+    width: 380px;
+    margin: .5rem;
 
     &::after {
       transform: rotate(-90deg);
@@ -23,26 +24,22 @@
       content: 'G-ADS';
       font-size: 2rem;
       color: #fff;
-      @mixin absoluteCenter;
+      @include absoluteCenter;
     }
 
-    @mixin small {
-      margin-bottom: .5em;
-      width: 100%;
+    @include respond(tab-land) {
+    width: 350px;
+    margin: .5rem;
     }
-    @mixin medium {
+    @include respond(tab-port) {
       width: 500px;
       margin: .5rem 0;
     }
+    @include respond(phone) {
+      margin-bottom: .5em;
+      width: 100%;
+    }
 
-    @mixin atMedium {
-      width: 350px;
-      margin: .5rem;
-    }
-    @mixin atLarge {
-      width: 380px;
-      margin: .5rem;
-    }
     &:hover {
       transform: scale(1.01);
     }
@@ -67,10 +64,10 @@
       content: 'G-ADS';
       font-size: 2rem;
       color: #fff;
-      @mixin absoluteCenter;
+      @include absoluteCenter;
     }
 
-    @mixin medium {
+    @include respond(tab-port) {
       width: 100%;
       &::before {
         font-size: 2rem;
@@ -86,7 +83,7 @@
       left: -40px;
       font-size: .8rem;
 
-      @mixin medium {
+      @include respond(tab-port) {
         transform: rotate(0);
         top: -15px;
         left: 0;
@@ -112,10 +109,10 @@
       content: 'G-ADS';
       font-size: 5rem;
       color: #fff;
-      @mixin absoluteCenter;
+      @include absoluteCenter;
     }
 
-    @mixin medium {
+    @include respond(tab-port) {
       width: 100%;
       margin: 2rem auto;
       &::before {
