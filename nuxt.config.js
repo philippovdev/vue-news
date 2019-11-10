@@ -2,6 +2,8 @@ const pkg = require('./package')
 const bodyParser = require('body-parser')
 const axios = require('axios')
 
+const postcssCustomMedia = require('postcss-custom-media');
+
 module.exports = {
   mode: 'universal',
 
@@ -46,9 +48,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    '@/assets/styles/main.scss'
-  ],
+  css: ['~assets/styles/main.css'],
 
   /*
   ** Plugins to load before mounting the App
@@ -58,22 +58,12 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    [
-      'nuxt-sass-resources-loader',
-      [
-        'assets/styles/main.scss'
-      ]
-    ],
-  ],
-  devModules: [
-    ['@nuxtjs/axios'],
-    // ['@nuxtjs/eslint-module']
-  ],
+  modules: ['@nuxtjs/axios'],
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
     credentials: false
   },
+
   /*
   ** Build configuration
   */
@@ -83,6 +73,12 @@ module.exports = {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
       plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-url': false,
+        'postcss-simple-vars': {},
+        'postcss-mixins': {},
+        'postcss-nested': {},
+        'postcss-hexrgba': {},
         'postcss-preset-env': {
           stage: 0,
           browsers: [

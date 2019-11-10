@@ -4,22 +4,23 @@
   overflow: hidden;
   background-color: #fff;
   height: 400px;
-  width: 380px;
-  margin: .5rem;
 
-  @include respond(tab-port) {
+  @mixin small {
+    margin-bottom: .5em;
+    width: 100%;
+  }
+  @mixin medium {
     width: 500px;
     margin: .5rem 0;
   }
 
-  @include respond(tab-land) {
+  @mixin atMedium {
     width: 350px;
     margin: .5rem;
   }
-
-  @include respond(phone) {
-    margin-bottom: .5em;
-    width: 100%;
+  @mixin atLarge {
+    width: 380px;
+    margin: .5rem;
   }
 
 
@@ -72,7 +73,7 @@
     font-weight: lighter;
     font-size: 1.5em;
 
-    @include respond(phone) {
+    @mixin small {
       font-size: 1.2rem;
     }
   }
@@ -80,7 +81,7 @@
     font-size: 1em;
     line-height: 1.4;
 
-    @include respond(phone) {
+    @mixin small {
       font-size: .9rem;
     }
   }
