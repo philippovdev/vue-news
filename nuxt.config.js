@@ -119,7 +119,6 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
-    base: '/',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'
