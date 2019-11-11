@@ -50,11 +50,12 @@
   }
 
   &--side {
-    background-color: #cccccc;
+    //background-color: #cccccc;
     text-align: center;
     position: relative;
     height: 100%;
     width: 300px;
+    margin-bottom: 2rem;
 
     &.up {
       background-color: red;
@@ -64,12 +65,12 @@
       position: fixed;
     }
 
-    &::before {
+    /*&::before {
       content: 'G-ADS';
       font-size: 2rem;
       color: #fff;
       @include absoluteCenter;
-    }
+    }*/
 
     @include respond(tab-port) {
       width: 100%;
@@ -98,23 +99,28 @@
   &--top,
   &--bottom {
     width: 680px;
+    box-shadow: 1px 1px 5px #ccc;
   }
   &--top,
   &--bottom,
   &--post-body {
-    height: 200px;
+    //height: 200px;
     margin: 3rem auto;
-    background-color: #cccccc;
+    //background-color: #cccccc;
     content: 'ads';
     text-align: center;
     position: relative;
+    box-shadow: 1px 1px 5px #ccc;
 
-    &::before {
+    & img {
+      text-align: center;
+    }
+/*    &::before {
       content: 'G-ADS';
       font-size: 5rem;
       color: #fff;
       @include absoluteCenter;
-    }
+    }*/
 
     @include respond(tab-port) {
       width: 100%;

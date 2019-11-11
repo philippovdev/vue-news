@@ -79,13 +79,18 @@
     }
     .post__aside {
       width: 30%;
+
       @include respond(tab-port) {
+        margin: 0 auto;
+        width: 100%;
+      }
+      /*@include respond(tab-port) {
         height: 200px;
       }
 
       .post__ad-1-3 {
         height: 600px;
-      }
+      }*/
     }
   }
 }

@@ -1,7 +1,9 @@
 <template>
   <div class="category-page container">
     <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
-    <div class="ad--top"></div>
+    <div class="ad--top">
+      <a href="http://s.click.aliexpress.com/e/s2HErNWu?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB13jH6J4TpK1RjSZFKq6y2wXXaP/EN_300_250.jpg"/></a>
+    </div>
     <PostList :posts="categoryPosts"/>
     <div class="btn-box">
       <!--      <button class="btn btn__load" @click="loadNewPosts">Next Page</button>-->
@@ -39,6 +41,7 @@
         const postBlocks = document.querySelectorAll('.post-preview')
         for (const post in postBlocks) {
           const ad = document.createElement('div')
+          ad.innerHTML = '<a href="http://s.click.aliexpress.com/e/3Z5NU1KC?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fopbov9TBuNjy1zb760pepXaT/EN_300_250.png"/></a>'
           ad.classList.add('ad--feed')
           if (+post !== 0 && +post % 4 === 0) {
             this.insertAfter(ad, postBlocks[post])

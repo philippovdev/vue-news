@@ -1,7 +1,9 @@
 <template>
   <div class="home-page container">
     <h1 class="heading--main">Fresh News from Lova Source</h1>
-    <div class="ad--top"></div>
+    <div class="ad--top">
+      <a href="http://s.click.aliexpress.com/e/3Z5NU1KC?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fopbov9TBuNjy1zb760pepXaT/EN_300_250.png"/></a>
+    </div>
     <PostList :posts="loadedPosts"/>
   </div>
 </template>
