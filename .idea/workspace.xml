@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/elements/_ads.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/elements/_ads.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/layout/_single-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/layout/_single-post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Posts/SinglePost.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Posts/SinglePost.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -384,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573413260690</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="All working on 'live'">
+      <created>1573460427832</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1573460427832</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Feed ad added">
+      <created>1573461416793</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1573461416793</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,6 +495,8 @@
     <MESSAGE value="Google analytics added" />
     <MESSAGE value="Working on dev." />
     <MESSAGE value="Working on dev + route: '/app/'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on dev + route: '/app/'" />
+    <MESSAGE value="All working on 'live'" />
+    <MESSAGE value="Feed ad added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feed ad added" />
   </component>
 </project>
