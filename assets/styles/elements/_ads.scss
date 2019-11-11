@@ -1,7 +1,7 @@
 .ad {
   &--feed {
     box-shadow: 1px 1px 5px #ccc;
-    background-color: #cccccc;
+    //background-color: #cccccc;
     border-radius: 4px;
     overflow: hidden;
     height: 400px;
@@ -9,6 +9,10 @@
     position: relative;
     width: 380px;
     margin: .5rem;
+
+    & img {
+      @include absoluteCenter;
+    }
 
     &::after {
       transform: rotate(-90deg);
@@ -20,12 +24,12 @@
       font-size: .8rem;
     }
 
-    &::before {
+    /*&::before {
       content: 'G-ADS';
       font-size: 2rem;
       color: #fff;
       @include absoluteCenter;
-    }
+    }*/
 
     @include respond(tab-land) {
     width: 350px;

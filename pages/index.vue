@@ -48,6 +48,7 @@
         const postBlocks = document.querySelectorAll('.post-preview')
         for (const post in postBlocks) {
           const ad = document.createElement('div')
+          ad.innerHTML = '<a href="http://s.click.aliexpress.com/e/NLNcKs5S?bz=120*600" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fvntX7yWBuNjy0Fp761ssXXad/EN_300_250.png"/></a></div>';
           ad.classList.add('ad--feed')
           if (+post !== 0 && +post % 4 === 0) {
             this.insertAfter(ad, postBlocks[post])
