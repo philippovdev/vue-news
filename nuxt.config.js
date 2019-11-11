@@ -78,7 +78,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '',
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -95,7 +94,7 @@ module.exports = {
             'last 2 versions',
             'ie >= 11',
           ],
-        'cssnano': { preset: 'default' },
+          'cssnano': { preset: 'default' },
         },
       },
       preset: {
@@ -120,7 +119,6 @@ module.exports = {
     mode: 'out-in'
   },
   router: {
-    base: '/app/',
     linkActiveClass: 'nuxt-active-link',
     linkExactActiveClass: 'nuxt-exactive-active-link',
     // middleware: 'log'

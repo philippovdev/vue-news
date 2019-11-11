@@ -47,7 +47,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -378,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573411401248</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Working on dev + route: '/app/'">
+      <created>1573413260690</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1573413260690</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,6 +476,7 @@
     <MESSAGE value="Changed to scss" />
     <MESSAGE value="Google analytics added" />
     <MESSAGE value="Working on dev." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on dev." />
+    <MESSAGE value="Working on dev + route: '/app/'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on dev + route: '/app/'" />
   </component>
 </project>
