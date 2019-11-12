@@ -2,7 +2,7 @@ const pkg = require('./package')
 const bodyParser = require('body-parser')
 const axios = require('axios')
 
-const postcssCustomMedia = require('postcss-custom-media');
+const postcssCustomMedia = require('postcss-custom-media')
 
 module.exports = {
   mode: 'universal',
@@ -23,9 +23,9 @@ module.exports = {
     ],
     script: [
       {
-        "data-ad-client": "ca-pub-6228577781902066",
+        'data-ad-client': 'ca-pub-6228577781902066',
         async: true,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
       }
     ],
     link: [
@@ -55,23 +55,32 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/vue-lazyload.js', { src: '~plugins/ga.js', mode: 'client' }],
+  plugins: ['~plugins/core-components.js', '~plugins/date-filter.js', '~plugins/filters.js', '~plugins/vue-lazyload.js', {
+    src: '~plugins/ga.js',
+    mode: 'client'
+  }],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    ['@nuxtjs/axios'],
-    [
+    ['@nuxtjs/axios',
+      '@nuxtjs/proxy',
       'nuxt-sass-resources-loader',
       [
         'assets/styles/main.scss'
       ]
     ],
   ],
+
+  proxy: {
+    '/admin': { target: 'https://admin.lova.news', pathRewrite: { '^/admin': '' } },
+  },
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
-    credentials: false
+    credentials: true,
+    proxy: true,
+    proxyHeaders: false
   },
 
   /*

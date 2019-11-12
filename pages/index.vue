@@ -23,7 +23,6 @@
       clearAds () {
         const allAds = document.querySelectorAll('.ad--feed');
         for (let ad of allAds) {
-          console.log(allAds);
           ad.remove();
         }
       },
