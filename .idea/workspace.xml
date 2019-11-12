@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="Added g-analytics">
+    <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/news/_category/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/news/_category/index.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -413,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573502932033</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Cleaned console">
+      <created>1573588671558</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1573588671558</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +502,6 @@
     <MESSAGE value="Mobile styles for main page and post added" />
     <MESSAGE value="Fixed main drawer layout styling" />
     <MESSAGE value="Styled single post section and added adsence script" />
-    <MESSAGE value="Cleaned console" />
     <MESSAGE value="Keep working on async load" />
     <MESSAGE value="Infinite pagination added for main and category" />
     <MESSAGE value="Fixing infinite loading for the main page and category" />
@@ -510,6 +515,7 @@
     <MESSAGE value="Feed ad added" />
     <MESSAGE value="Initial ads added" />
     <MESSAGE value="Added g-analytics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added g-analytics" />
+    <MESSAGE value="Cleaned console" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned console" />
   </component>
 </project>
