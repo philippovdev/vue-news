@@ -72,15 +72,10 @@ module.exports = {
       ]
     ],
   ],
-
-  proxy: {
-    '/admin': { target: 'https://admin.lova.news', pathRewrite: { '^/admin': '' } },
-  },
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
-    credentials: true,
-    proxy: true,
-    proxyHeaders: false
+    credentials: false,
+    proxyHeaders: true,
   },
 
   /*
