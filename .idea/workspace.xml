@@ -539,6 +539,7 @@
     <MESSAGE value="Added g-analytics" />
     <MESSAGE value="Cleaned console" />
     <MESSAGE value="Working on axios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on axios" />
+    <MESSAGE value="Added GDPR page and functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GDPR page and functionality" />
   </component>
 </project>
