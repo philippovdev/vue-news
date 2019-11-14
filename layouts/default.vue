@@ -5,18 +5,23 @@
       :show="displaySidenav"
       @close="displaySidenav = false" />
     <nuxt/>
+    <client-only>
+      <Cookie />
+    </client-only>
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/Navigation/TheHeader'
 import TheSidenav from '@/components/Navigation/TheSidenav'
+import Cookie from "@/components/Cookie.vue";
 
 export default {
   // middleware: 'log',
   components: {
     TheHeader,
-    TheSidenav
+    TheSidenav,
+    Cookie
   },
   data() {
     return {
