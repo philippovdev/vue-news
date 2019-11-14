@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Cookie.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/privacy-policy/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/google-analytics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +67,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="list.type.of.created.stylesheet" value="PostCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,13 +76,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news\pages\privacy-policy" />
+      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Andrew\Desktop\news\pages" />
       <recent name="C:\Users\Andrew\Desktop\news\assets\images" />
       <recent name="C:\Users\Andrew\Desktop\news\static" />
       <recent name="C:\Users\Andrew\Desktop\news" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Andrew\Desktop\news\pages\posts\_category\_slug" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -426,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573589008671</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Working on axios">
+      <created>1573630626656</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1573630626656</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,6 +538,8 @@
     <MESSAGE value="Initial ads added" />
     <MESSAGE value="Added g-analytics" />
     <MESSAGE value="Cleaned console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned console" />
+    <MESSAGE value="Working on axios" />
+    <MESSAGE value="Added GDPR page and functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GDPR page and functionality" />
   </component>
 </project>
