@@ -84,6 +84,9 @@
     font-size: 14px
     text-align: left
     line-height: 1.4
+    @media (max-width: 992px)
+      left: 0
+      width: initial
     &__link
       color: #cccccc
       text-decoration: underline
@@ -94,17 +97,15 @@
       margin-top: 15px
       display: flex
       justify-content: center
-      & .btn
+      & .btn__cookie
         margin: 0
         &:first-of-type
           margin-right: 20px
-        &__cookie--accept
+        &--accept
           background-color: #ffffff
           color: #443f52
           border: 2px solid #fff
-          /*background-color: #15a62e*/
-        &__cookie--deny
-          /*background-color: #e63062*/
+        &--deny
           background-color: transparent
           color: #ffffff
           border: 2px solid #ffffff
