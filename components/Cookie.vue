@@ -75,18 +75,22 @@
   .cookie
     z-index: 1
     position: fixed
-    bottom: 0
-    right: 0
+    bottom: 15px
+    right: 15px
+    border-radius: 6px
     width: 400px
     color: #ffffff
-    background-color: #443f52
+    background-color: #5e5af5
     padding: 15px
     font-size: 14px
     text-align: left
     line-height: 1.4
     @media (max-width: 992px)
+      width: unset
+      border-radius: 0
+      right: 0
+      bottom: 0
       left: 0
-      width: initial
     &__link
       color: #cccccc
       text-decoration: underline
