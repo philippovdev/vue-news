@@ -61,10 +61,6 @@ module.exports = {
     '~plugins/filters.js',
     '~plugins/vue-lazyload.js',
     {
-      src: '~plugins/ga.js',
-      mode: 'client'
-    },
-    {
       src: '~/plugins/google-analytics.js',
       mode: 'client'
     }
