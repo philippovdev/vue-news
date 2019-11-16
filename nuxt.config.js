@@ -87,9 +87,9 @@ module.exports = {
   ** Build configuration
   */
   buildModules: [
-    ['@nuxtjs/google-analytics', {
+/*    ['@nuxtjs/google-analytics', {
       id: 'UA-74645070-2'
-    }]
+    }]*/
   ],
   env: {
     baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
