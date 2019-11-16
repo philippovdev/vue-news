@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="added context">
+    <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/google-analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/google-analytics.js" afterDir="false" />
     </list>
@@ -154,13 +154,6 @@
       <workItem from="1572231681149" duration="2644000" />
       <workItem from="1572284549232" duration="57088000" />
       <workItem from="1573388526344" duration="771000" />
-    </task>
-    <task id="LOCAL-00008" summary="More posts load button with saving posts in vuex store">
-      <created>1571773860252</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1571773860252</updated>
     </task>
     <task id="LOCAL-00009" summary="Added dynamic menu links from categories">
       <created>1571813692792</created>
@@ -498,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573912343059</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="deleted context">
+      <created>1573913106358</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1573913106358</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed main drawer layout styling" />
     <MESSAGE value="Styled single post section and added adsence script" />
     <MESSAGE value="Keep working on async load" />
     <MESSAGE value="Infinite pagination added for main and category" />
@@ -600,6 +599,7 @@
     <MESSAGE value="disabled debug mode" />
     <MESSAGE value="Deleted console" />
     <MESSAGE value="added context" />
-    <option name="LAST_COMMIT_MESSAGE" value="added context" />
+    <MESSAGE value="deleted context" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted context" />
   </component>
 </project>
