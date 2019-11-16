@@ -10,12 +10,12 @@ export default (ctx, inject) => {
       disabled: false,
       route: ctx.app.router
     })
+    ctx.$ga = Vue.$ga
+    inject('ga', Vue.$ga)
   } else if (typeof getGDPR !== 'undefined' && getGDPR === 'false') {
     Vue.use(vueAnalytics, {
       id: 'UA-74645070-2',
       disabled: true,
     })
   }
-  ctx.$ga = Vue.$ga
-  inject('ga', Vue.$ga)
 }
