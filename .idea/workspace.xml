@@ -155,13 +155,6 @@
       <workItem from="1572284549232" duration="57088000" />
       <workItem from="1573388526344" duration="771000" />
     </task>
-    <task id="LOCAL-00004" summary="Added background-image to post">
-      <created>1571595035807</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1571595035807</updated>
-    </task>
     <task id="LOCAL-00005" summary="Changed bg for main page">
       <created>1571632390158</created>
       <option name="number" value="00005" />
@@ -498,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573910459562</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added context">
+      <created>1573911459919</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1573911459919</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Mobile styles for main page and post added" />
     <MESSAGE value="Fixed main drawer layout styling" />
     <MESSAGE value="Styled single post section and added adsence script" />
     <MESSAGE value="Keep working on async load" />
@@ -600,6 +599,7 @@
     <MESSAGE value="enabled nuxt-analytics" />
     <MESSAGE value="disabled debug mode" />
     <MESSAGE value="Deleted console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted console" />
+    <MESSAGE value="added context" />
+    <option name="LAST_COMMIT_MESSAGE" value="added context" />
   </component>
 </project>
