@@ -7,12 +7,7 @@ if (typeof getGDPR !== 'undefined' && getGDPR === 'true') {
   console.log('I am ebled')
   Vue.use(vueAnalytics, {
     id: 'UA-74645070-2',
-    disabled: false,
-    debug: {
-      enabled: true, // default value
-      trace: false, // default value
-      sendHitTask: true // default value
-    }
+    disabled: false
   })
 } else if (typeof getGDPR !== 'undefined' && getGDPR === 'false') {
   console.log('I am disabled')
