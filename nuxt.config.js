@@ -91,7 +91,8 @@ module.exports = {
     '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
-    id: 'UA-74645070-2'
+    id: 'UA-74645070-2',
+    checkDuplicatedScript: true
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
