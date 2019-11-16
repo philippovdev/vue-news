@@ -4,7 +4,6 @@ import vueAnalytics from 'vue-analytics'
 const getGDPR = localStorage.getItem('GDPR:accepted')
 
 export default (ctx, inject) => {
-  console.log(ctx)
   if (typeof getGDPR !== 'undefined' && getGDPR === 'true') {
     Vue.use(vueAnalytics, {
       id: 'UA-74645070-2',
