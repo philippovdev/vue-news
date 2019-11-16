@@ -86,11 +86,14 @@ module.exports = {
   /*
   ** Build configuration
   */
+
   buildModules: [
-/*    ['@nuxtjs/google-analytics', {
-      id: 'UA-74645070-2'
-    }]*/
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: 'UA-74645070-2',
+    checkDuplicatedScript: true
+  },
   env: {
     baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
