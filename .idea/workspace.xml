@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6700a28f-0d00-46cf-983f-d35b92d04593" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/google-analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/google-analytics.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -491,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573905587681</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="disabled debug mode">
+      <created>1573906534118</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1573906534118</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Meta title added to categories" />
     <MESSAGE value="Added category label to card" />
     <MESSAGE value="Mobile styles for main page and post added" />
     <MESSAGE value="Fixed main drawer layout styling" />
@@ -593,6 +598,7 @@
     <MESSAGE value="Adopted width of privacy-policy text" />
     <MESSAGE value="Deleted ga.js" />
     <MESSAGE value="enabled nuxt-analytics" />
-    <option name="LAST_COMMIT_MESSAGE" value="enabled nuxt-analytics" />
+    <MESSAGE value="disabled debug mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled debug mode" />
   </component>
 </project>
