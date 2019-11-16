@@ -86,39 +86,11 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {
-    postcss: {
-      // Add plugin names as key and arguments as value
-      // Install them before as dependencies with npm or yarn
-      plugins: {
-        // Disable a plugin by passing false as value
-        'postcss-url': false,
-        'postcss-simple-vars': {},
-        'postcss-mixins': {},
-        'postcss-nested': {},
-        'postcss-hexrgba': {},
-        'postcss-preset-env': {
-          stage: 0,
-          browsers: [
-            'last 2 versions',
-            'ie >= 11',
-          ],
-          'cssnano': { preset: 'default' },
-        },
-      },
-      preset: {
-        // Change the postcss-preset-env settings
-        autoprefixer: {
-          grid: true
-        },
-      }
-    },
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  },
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-74645070-2'
+    }]
+  ],
   env: {
     baseUrl: process.env.BASE_URL || 'https://admin.lova.news/',
     fbAPIKey: 'AIzaSyCQCdp9jUi4MPrJfK6Zw-DLFFNioeszbdY'
