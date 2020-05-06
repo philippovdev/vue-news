@@ -1,6 +1,8 @@
 <template>
   <div class="home-page container">
-    <Yad />
+    <div class="ad ad--top">
+      <Yad />
+    </div>
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <PostList :posts="loadedPosts"/>
   </div>

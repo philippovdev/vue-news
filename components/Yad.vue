@@ -1,16 +1,18 @@
 <template>
-  <div class="y-ad ad--top">
-    <div id="yandex_rtb_R-A-568097-1"></div>
-  </div>
+  <div class="yad"></div>
 </template>
 
 <script>
-    export default {
-        name: "Yad",
-      mounted () {
-        const ad = document.createElement('script')
-        ad.type = 'text/javascript'
-        ad.innerHTML = `
+  export default {
+    name: "Yad",
+    mounted () {
+      const ad = document.createElement('script')
+      const adId = document.createElement('div')
+      adId.id = 'yandex_rtb_R-A-568097-1'
+
+      const adBoxes = document.querySelectorAll('.yad')
+      ad.type = 'text/javascript'
+      ad.innerHTML = `
               (function(w, d, n, s, t) {
               w[n] = w[n] || [];
               w[n].push(function() {
@@ -27,10 +29,11 @@
               s.async = true;
               t.parentNode.insertBefore(s, t);
             })(this, this.document, "yandexContextAsyncCallbacks");`
-        const adBox = document.getElementById('yandex_rtb_R-A-568097-1')
-        adBox.parentNode.insertBefore(ad, adBox)
-      }
+
+      adBoxes.forEach(box => box.appendChild(ad))
+      ad.parentNode.insertBefore(adId, ad)
     }
+  }
 </script>
 
 <style scoped>
