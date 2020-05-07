@@ -111,6 +111,7 @@ module.exports = {
   serverMiddleware: [bodyParser.json(), '~/api'],
   generate: {
     routes: function () {
+
       return axios
         .get('https://admin.lova.news/news/200')
         .then(res => {
