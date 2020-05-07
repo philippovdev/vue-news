@@ -21,13 +21,6 @@ module.exports = {
         content: 'Fresh news from all over the World.'
       }
     ],
-    script: [
-      {
-        'data-ad-client': 'ca-pub-6228577781902066',
-        async: true,
-        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-      }
-    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
@@ -77,6 +70,16 @@ module.exports = {
         'assets/styles/main.scss'
       ]
     ],
+    ['@naumstory/nuxtjs-yandex-metrika',
+      {
+        id: '62530381',
+        webvisor: true,
+        clickmap: true,
+        useCDN: false,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      }
+    ]
   ],
   axios: {
     baseURL: process.env.BASE_URL || 'https://admin.lova.news/news/10',
