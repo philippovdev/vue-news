@@ -70,7 +70,8 @@
           const adBox = document.createElement('div')
 
           adBox.classList.add('ad--feed')
-          adBox.insertAdjacentHTML('afterbegin', '<div id="yandex_rtb_R-A-568097-2"></div>')
+          const adElementWithId = `<div id="yandex_rtb_R-A-568097-2-${post}"></div>`
+          adBox.insertAdjacentHTML('afterbegin', adElementWithId)
 
           const ad = document.createElement('script')
           ad.type = 'text/javascript'
