@@ -1,16 +1,16 @@
 <template>
   <div class="home-page container">
+    <Yad />
     <h1 class="heading--main">Fresh News from Lova Source</h1>
-    <div class="ad--top">
-      <a href="http://s.click.aliexpress.com/e/3Z5NU1KC?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fopbov9TBuNjy1zb760pepXaT/EN_300_250.png"/></a>
-    </div>
     <PostList :posts="loadedPosts"/>
   </div>
 </template>
 
 <script>
 
+  import Yad from '../components/Yad'
   export default {
+    components: {Yad},
     computed: {
       loadedPosts () {
         return this.$store.getters.loadedPosts
@@ -21,7 +21,7 @@
         referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling)
       },
       clearAds () {
-        const allAds = document.querySelectorAll('.ad--feed');
+        const allAds = document.querySelectorAll('.ad--feed.ad--feed');
         for (let ad of allAds) {
           ad.remove();
         }
@@ -48,11 +48,34 @@
       addAds () {
         const postBlocks = document.querySelectorAll('.post-preview')
         for (const post in postBlocks) {
-          const ad = document.createElement('div')
-          ad.innerHTML = '<a href="http://s.click.aliexpress.com/e/NLNcKs5S?bz=120*600" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fvntX7yWBuNjy0Fp761ssXXad/EN_300_250.png"/></a></div>';
-          ad.classList.add('ad--feed')
+          const adBox = document.createElement('div')
+          const adId = document.createElement('div')
+          const ad = document.createElement('script')
+          ad.type = 'text/javascript'
+          ad.innerHTML = `
+              (function(w, d, n, s, t) {
+              w[n] = w[n] || [];
+              w[n].push(function() {
+                Ya.Context.AdvManager.render({
+                  blockId: "R-A-568097-1",
+                  renderTo: "yandex_rtb_R-A-568097-1",
+                  async: true
+                });
+              });
+              t = d.getElementsByTagName("script")[0];
+              s = d.createElement("script");
+              s.type = "text/javascript";
+              s.src = "//an.yandex.ru/system/context.js";
+              s.async = true;
+              t.parentNode.insertBefore(s, t);
+            })(this, this.document, "yandexContextAsyncCallbacks");`
+
+          adBox.classList.add('ad--feed')
+          adId.id = 'yandex_rtb_R-A-568097-1'
+          adBox.appendChild(adId)
+          adId.parentNode.insertBefore(ad, adId)
           if (+post !== 0 && +post % 4 === 0) {
-            this.insertAfter(ad, postBlocks[post])
+            this.insertAfter(adBox, postBlocks[post])
           }
         }
       }
@@ -71,5 +94,7 @@
 </script>
 
 
-<style scoped>
-</style>
+<
+style
+scoped >
+< /style>
