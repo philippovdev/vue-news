@@ -10,7 +10,8 @@
         Ya.Context.AdvManager.render({
         blockId: "R-A-568097-1",
         renderTo: "yandex_rtb_R-A-568097-1",
-        async: true
+        async: true,
+        pageNumber: 0
         });
         });
         t = d.getElementsByTagName("script")[0];
@@ -78,7 +79,8 @@
             Ya.Context.AdvManager.render({
                 blockId: "R-A-568097-2",
                 renderTo: "yandex_rtb_R-A-568097-2",
-                async: true
+                async: true,
+                pageNumber: ${post}
             });
         });
         t = d.getElementsByTagName("script")[0];
