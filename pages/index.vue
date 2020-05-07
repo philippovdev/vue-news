@@ -11,7 +11,6 @@
         blockId: "R-A-568097-1",
         renderTo: "yandex_rtb_R-A-568097-1",
         async: true,
-        pageNumber: 0
         });
         });
         t = d.getElementsByTagName("script")[0];
@@ -81,7 +80,7 @@
         w[n].push(function() {
             Ya.Context.AdvManager.render({
                 blockId: "R-A-568097-2",
-                renderTo: "yandex_rtb_${post}",
+                renderTo: "rtb-2-${post}",
                 async: true,
                 pageNumber: ${post}
             });
