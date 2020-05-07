@@ -9,6 +9,7 @@
     position: relative;
     width: 380px;
     margin: .5rem;
+    min-width: 300px;
 
     & img {
       @include absoluteCenter;
@@ -55,6 +56,7 @@
     position: relative;
     height: 100%;
     width: 300px;
+    min-width: 300px;
     margin-bottom: 2rem;
 
     &.up {
@@ -98,12 +100,14 @@
 
   &--top,
   &--bottom {
+    min-width: 300px;
     width: 680px;
     box-shadow: 1px 1px 5px #ccc;
   }
   &--top,
   &--bottom,
   &--post-body {
+    min-width: 300px;
     min-height: 200px;
     margin: 3rem auto;
     //background-color: #cccccc;

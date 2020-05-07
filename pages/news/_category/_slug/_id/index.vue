@@ -68,7 +68,6 @@
       createText () {
         const text = this.loadedPost.text.replace(/<div>([\w\W]*?)<\/div>/gi, '<p>$1</p>')
         this.loadedPost.text = text
-        console.log(this.loadedPost.text)
       },
       addPostAd () {
         const ps = document.querySelectorAll('p')
@@ -99,8 +98,6 @@
         adId.parentNode.insertBefore(ad, adId)
         for (const p in ps) {
           if (+p === 4 && ps.length >= 10) {
-            console.log({adBox})
-            console.log(ps[p])
             this.insertAfter(adBox, ps[p])
           }
         }
