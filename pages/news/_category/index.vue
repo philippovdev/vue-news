@@ -3,7 +3,7 @@
     <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top">
       <!-- Yandex.RTB R-A-568097-1 -->
-      <div id="yandex_rtb_R-A-568097-1"></div>
+      <div id="yandex_rtb_R-A-568097-1" class="yandex-adaptive"></div>
       <script2 type="text/javascript">
         (function(w, d, n, s, t) {
           w[n] = w[n] || [];
@@ -62,7 +62,7 @@
           const adBox = document.createElement('div')
 
           adBox.classList.add('ad--feed')
-          const adElementWithId = `<div id="yandex_rtb_R-A-568097-2-${post}"></div>`
+          const adElementWithId = `<div id="yandex_rtb_R-A-568097-2-${post}" class="yandex-adaptive"></div>`
           adBox.insertAdjacentHTML('afterbegin', adElementWithId)
 
           const ad = document.createElement('script')
