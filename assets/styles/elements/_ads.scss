@@ -1,7 +1,7 @@
 .ad {
-  &--feed {
+  &--feed,
+  &--feed .yandex-adaptive {
     box-shadow: 1px 1px 5px #ccc;
-    //background-color: #cccccc;
     border-radius: 4px;
     overflow: hidden;
     height: 400px;
@@ -25,16 +25,9 @@
       font-size: .8rem;
     }
 
-    /*&::before {
-      content: 'G-ADS';
-      font-size: 2rem;
-      color: #fff;
-      @include absoluteCenter;
-    }*/
-
     @include respond(tab-land) {
-    width: 350px;
-    margin: .5rem;
+      width: 350px;
+      margin: .5rem;
     }
     @include respond(tab-port) {
       width: 500px;
@@ -51,7 +44,6 @@
   }
 
   &--side {
-    //background-color: #cccccc;
     text-align: center;
     position: relative;
     height: 100%;
@@ -66,13 +58,6 @@
     &.fixed {
       position: fixed;
     }
-
-    /*&::before {
-      content: 'G-ADS';
-      font-size: 2rem;
-      color: #fff;
-      @include absoluteCenter;
-    }*/
 
     @include respond(tab-port) {
       width: 100%;
@@ -99,18 +84,23 @@
   }
 
   &--top,
-  &--bottom {
+  &--bottom,
+  &--top .yandex-adaptive,
+  &--bottom .yandex-adaptive {
     min-width: 300px;
     width: 680px;
     box-shadow: 1px 1px 5px #ccc;
   }
+
   &--top,
   &--bottom,
-  &--post-body {
+  &--post-body,
+  &--top .yandex-adaptive,
+  &--bottom .yandex-adaptive,
+  &--post-body .yandex-adaptive {
     min-width: 300px;
     min-height: 200px;
     margin: 3rem auto;
-    //background-color: #cccccc;
     content: 'ads';
     text-align: center;
     position: relative;
@@ -119,18 +109,20 @@
     & img {
       text-align: center;
     }
-/*    &::before {
-      content: 'G-ADS';
-      font-size: 5rem;
-      color: #fff;
-      @include absoluteCenter;
-    }*/
 
     @include respond(tab-port) {
       width: 100%;
       margin: 2rem auto;
       &::before {
         font-size: 2rem;
+      }
+      & .yandex-adaptive {
+        width: 100%;
+        margin: 2rem auto;
+
+        &::before {
+          font-size: 2rem;
+        }
       }
     }
 
@@ -142,7 +134,17 @@
       left: 0;
     }
   }
+
   &--post-body::after {
     top: -23px;
+  }
+
+  &--top,
+  &--bottom,
+  &--post-body,
+  &--feed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
