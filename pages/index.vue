@@ -66,11 +66,12 @@
       },
       addAds () {
         const postBlocks = document.querySelectorAll('.post-preview')
-        const adBox = document.createElement('div')
-        const adId = document.createElement('div')
-        const ad = document.createElement('script')
-        ad.type = 'text/javascript'
-        ad.innerHTML = `
+        for (const post in postBlocks) {
+          const adBox = document.createElement('div')
+          const adId = document.createElement('div')
+          const ad = document.createElement('script')
+          ad.type = 'text/javascript'
+          ad.innerHTML = `
           (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
@@ -88,11 +89,10 @@
         t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");`
 
-        adBox.classList.add('ad--feed')
-        adId.id = 'yandex_rtb_R-A-568097-2'
-        adBox.appendChild(ad)
-        ad.parentNode.insertBefore(adId, ad)
-        for (const post in postBlocks) {
+          adBox.classList.add('ad--feed')
+          adId.id = 'yandex_rtb_R-A-568097-2'
+          adBox.appendChild(adId)
+          adId.parentNode.insertBefore(ad, adId)
           if (+post !== 0 && +post % 3 === 0) {
             this.insertAfter(adBox, postBlocks[post])
           }
