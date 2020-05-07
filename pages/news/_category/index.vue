@@ -2,7 +2,25 @@
   <div class="category-page container">
     <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top">
-      <Yad/>
+      <div id="yandex_rtb_R-A-321666-4"></div>
+      <script2 type="text/javascript">
+        (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-321666-4",
+        renderTo: "yandex_rtb_R-A-321666-4",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");
+      </script2>
     </div>
     <PostList :posts="categoryPosts"/>
     <div class="btn-box">
@@ -14,11 +32,10 @@
 
 <script>
   import PostList from '@/components/Posts/PostList'
-  import Yad from '../../../components/Yad'
 
   export default {
     name: 'index',
-    components: {Yad, PostList},
+    components: {PostList},
     async asyncData (context) {
       let category = await context.route.params.category
       let getInitialPosts = await context.app.$axios('https://admin.lova.news/news/10/' + category)

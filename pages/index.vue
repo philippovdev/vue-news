@@ -1,7 +1,26 @@
 <template>
   <div class="home-page container">
-    <div class="ad ad--top">
-      <Yad />
+    <div class="ad ad--top yad">
+      <!-- Yandex.RTB R-A-321666-4 -->
+      <div id="yandex_rtb_R-A-321666-4"></div>
+      <script2 type="text/javascript">
+        (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-321666-4",
+        renderTo: "yandex_rtb_R-A-321666-4",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");
+      </script2>
     </div>
     <h1 class="heading--main">Fresh News from Lova Source</h1>
     <PostList :posts="loadedPosts"/>
@@ -10,9 +29,7 @@
 
 <script>
 
-  import Yad from '../components/Yad'
   export default {
-    components: {Yad},
     computed: {
       loadedPosts () {
         return this.$store.getters.loadedPosts

@@ -13,8 +13,8 @@ module.exports = {
   head: {
     title: 'LOVA News',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {
         hid: 'description',
         name: 'description',
@@ -22,7 +22,7 @@ module.exports = {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Open+Sans'
@@ -32,7 +32,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#999', height: '4px', duration: 1000 },
+  loading: {color: '#999', height: '4px', duration: 1000},
   loadingIndicator: {
     name: 'circle',
     color: '#999'
@@ -53,10 +53,8 @@ module.exports = {
     '~plugins/date-filter.js',
     '~plugins/filters.js',
     '~plugins/vue-lazyload.js',
-    {
-      src: '~/plugins/google-analytics.js',
-      mode: 'client'
-    }
+    {src: '~plugins/script2', mode: 'client'},
+    {src: '~/plugins/google-analytics.js', mode: 'client'}
   ],
 
   /*
@@ -120,7 +118,7 @@ module.exports = {
           for (const key in res.data) {
             routes.push({
               route: `/news/${key.category.name}/${key.slug}/${key.id}`,
-              payload: { postData: res.data[key] }
+              payload: {postData: res.data[key]}
             })
           }
           return routes

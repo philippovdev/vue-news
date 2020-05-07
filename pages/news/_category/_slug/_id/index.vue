@@ -1,7 +1,25 @@
 <template>
   <div class="single-post-page">
-    <div class="ad--post ad--top">
-      <Yad/>
+    <div class="ad--post ad--top yad">
+      <div id="yandex_rtb_R-A-321666-4"></div>
+      <script2 type="text/javascript">
+        (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-321666-4",
+        renderTo: "yandex_rtb_R-A-321666-4",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");
+      </script2>
     </div>
     <section class="post">
       <h1 class="post__title" v-html="loadedPost.title"></h1>
@@ -14,17 +32,55 @@
           <a :href="sourceLink" target="_blank" class="text-center">Source of origin: {{ sourceName }}</a>
         </article>
         <aside class="aside post__aside">
-          <div class="post__ad-1-3 ad--side">
-            <Yad/>
+          <div class="post__ad-1-3 ad--side yad">
+            <div id="yandex_rtb_R-A-321666-4"></div>
+            <script2 type="text/javascript">
+              (function(w, d, n, s, t) {
+              w[n] = w[n] || [];
+              w[n].push(function() {
+              Ya.Context.AdvManager.render({
+              blockId: "R-A-321666-4",
+              renderTo: "yandex_rtb_R-A-321666-4",
+              async: true
+              });
+              });
+              t = d.getElementsByTagName("script")[0];
+              s = d.createElement("script");
+              s.type = "text/javascript";
+              s.src = "//an.yandex.ru/system/context.js";
+              s.async = true;
+              t.parentNode.insertBefore(s, t);
+              })(this, this.document, "yandexContextAsyncCallbacks");
+            </script2>
           </div>
         </aside>
       </div>
     </section>
+    <div class="ad--bottom">
+      <div id="yandex_rtb_R-A-321666-4"></div>
+      <script2 type="text/javascript">
+        (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-321666-4",
+        renderTo: "yandex_rtb_R-A-321666-4",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+        })(this, this.document, "yandexContextAsyncCallbacks");
+      </script2>
+    </div>
   </div>
 </template>
 
 <script>
-  import Yad from '@/components/Yad'
 
   export default {
     mounted () {
@@ -63,7 +119,6 @@
         title: this.loadedPost.title,
       }
     },
-    components: {Yad},
     methods: {
       createText () {
         const text = this.loadedPost.text.replace(/<div>([\w\W]*?)<\/div>/gi, '<p>$1</p>')
@@ -94,8 +149,8 @@
               t.parentNode.insertBefore(s, t);
             })(this, this.document, "yandexContextAsyncCallbacks");`
         adId.id = 'yandex_rtb_R-A-568097-1'
-        adBox.appendChild(adId)
-        adId.parentNode.insertBefore(ad, adId)
+        adBox.appendChild(ad)
+        ad.parentNode.insertBefore(adId, ad)
         for (const p in ps) {
           if (+p === 4 && ps.length >= 10) {
             this.insertAfter(adBox, ps[p])
