@@ -2,7 +2,7 @@
   <div class="category-page container">
     <h1 class="heading--main">{{ category | firstUppercase }} News</h1>
     <div class="ad--top">
-      <a href="http://s.click.aliexpress.com/e/s2HErNWu?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB13jH6J4TpK1RjSZFKq6y2wXXaP/EN_300_250.jpg"/></a>
+      <Yad/>
     </div>
     <PostList :posts="categoryPosts"/>
     <div class="btn-box">
@@ -14,10 +14,11 @@
 
 <script>
   import PostList from '@/components/Posts/PostList'
+  import Yad from '../../../components/Yad'
 
   export default {
     name: 'index',
-    components: { PostList },
+    components: {Yad, PostList},
     async asyncData (context) {
       let category = await context.route.params.category
       let getInitialPosts = await context.app.$axios('https://admin.lova.news/news/10/' + category)
@@ -40,11 +41,34 @@
       addAds () {
         const postBlocks = document.querySelectorAll('.post-preview')
         for (const post in postBlocks) {
-          const ad = document.createElement('div')
-          ad.innerHTML = '<a href="http://s.click.aliexpress.com/e/3Z5NU1KC?bz=300*250" target="_parent"><img width="300" height="250" src="https://ae01.alicdn.com/kf/HTB1fopbov9TBuNjy1zb760pepXaT/EN_300_250.png"/></a>'
-          ad.classList.add('ad--feed')
+          const adBox = document.createElement('div')
+          const adId = document.createElement('div')
+          const ad = document.createElement('script')
+          ad.type = 'text/javascript'
+          ad.innerHTML = `
+              (function(w, d, n, s, t) {
+              w[n] = w[n] || [];
+              w[n].push(function() {
+                Ya.Context.AdvManager.render({
+                  blockId: "R-A-568097-1",
+                  renderTo: "yandex_rtb_R-A-568097-1",
+                  async: true
+                });
+              });
+              t = d.getElementsByTagName("script")[0];
+              s = d.createElement("script");
+              s.type = "text/javascript";
+              s.src = "//an.yandex.ru/system/context.js";
+              s.async = true;
+              t.parentNode.insertBefore(s, t);
+            })(this, this.document, "yandexContextAsyncCallbacks");`
+
+          adBox.classList.add('ad--feed')
+          adId.id = 'yandex_rtb_R-A-568097-1'
+          adBox.appendChild(ad)
+          ad.parentNode.insertBefore(adId, ad)
           if (+post !== 0 && +post % 4 === 0) {
-            this.insertAfter(ad, postBlocks[post])
+            this.insertAfter(adBox, postBlocks[post])
           }
         }
       },

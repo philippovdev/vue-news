@@ -74,8 +74,8 @@
 
           adBox.classList.add('ad--feed')
           adId.id = 'yandex_rtb_R-A-568097-1'
-          adBox.appendChild(adId)
-          adId.parentNode.insertBefore(ad, adId)
+          adBox.appendChild(ad)
+          ad.parentNode.insertBefore(adId, ad)
           if (+post !== 0 && +post % 4 === 0) {
             this.insertAfter(adBox, postBlocks[post])
           }
