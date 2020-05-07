@@ -60,7 +60,10 @@
         const postBlocks = document.querySelectorAll('.post-preview')
         for (const post in postBlocks) {
           const adBox = document.createElement('div')
-          const adId = document.createElement('div')
+
+          adBox.classList.add('ad--feed')
+          adBox.insertAdjacentHTML('afterbegin', '<div id="yandex_rtb_R-A-568097-2"></div>')
+
           const ad = document.createElement('script')
           ad.type = 'text/javascript'
           ad.innerHTML = `
@@ -82,11 +85,8 @@
         t.parentNode.insertBefore(s, t);
     })(this, this.document, "yandexContextAsyncCallbacks");`
 
-          adBox.classList.add('ad--feed')
-          adId.id = 'yandex_rtb_R-A-568097-2'
-          adBox.appendChild(adId)
           adBox.appendChild(ad)
-          ad.parentNode.insertBefore(adId, ad)
+
           if (+post !== 0 && +post % 3 === 0) {
             this.insertAfter(adBox, postBlocks[post])
           }
