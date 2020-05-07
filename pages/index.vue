@@ -5,20 +5,20 @@
       <div id="yandex_rtb_R-A-568097-1"></div>
       <script2 type="text/javascript">
         (function(w, d, n, s, t) {
-          w[n] = w[n] || [];
-          w[n].push(function() {
-            Ya.Context.AdvManager.render({
-              blockId: "R-A-568097-1",
-              renderTo: "yandex_rtb_R-A-568097-1",
-              async: true
-            });
-          });
-          t = d.getElementsByTagName("script")[0];
-          s = d.createElement("script");
-          s.type = "text/javascript";
-          s.src = "//an.yandex.ru/system/context.js";
-          s.async = true;
-          t.parentNode.insertBefore(s, t);
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-568097-1",
+        renderTo: "yandex_rtb_R-A-568097-1",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
       </script2>
     </div>
@@ -66,34 +66,34 @@
       },
       addAds () {
         const postBlocks = document.querySelectorAll('.post-preview')
-        for (const post in postBlocks) {
-          const adBox = document.createElement('div')
-          const adId = document.createElement('div')
-          const ad = document.createElement('script')
-          ad.type = 'text/javascript'
-          ad.innerHTML = `
-              (function(w, d, n, s, t) {
-              w[n] = w[n] || [];
-              w[n].push(function() {
-                Ya.Context.AdvManager.render({
-                  blockId: "R-A-568097-1",
-                  renderTo: "yandex_rtb_R-A-568097-1",
-                  async: true
-                });
-              });
-              t = d.getElementsByTagName("script")[0];
-              s = d.createElement("script");
-              s.type = "text/javascript";
-              s.src = "//an.yandex.ru/system/context.js";
-              s.async = true;
-              t.parentNode.insertBefore(s, t);
-            })(this, this.document, "yandexContextAsyncCallbacks");`
+        const adBox = document.createElement('div')
+        const adId = document.createElement('div')
+        const ad = document.createElement('script')
+        ad.type = 'text/javascript'
+        ad.innerHTML = `
+          (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-568097-2",
+                renderTo: "yandex_rtb_R-A-568097-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");`
 
-          adBox.classList.add('ad--feed')
-          adId.id = 'yandex_rtb_R-A-568097-1'
-          adBox.appendChild(ad)
-          ad.parentNode.insertBefore(adId, ad)
-          if (+post !== 0 && +post % 4 === 0) {
+        adBox.classList.add('ad--feed')
+        adId.id = 'yandex_rtb_R-A-568097-2'
+        adBox.appendChild(ad)
+        ad.parentNode.insertBefore(adId, ad)
+        for (const post in postBlocks) {
+          if (+post !== 0 && +post % 3 === 0) {
             this.insertAfter(adBox, postBlocks[post])
           }
         }
