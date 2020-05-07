@@ -1,6 +1,6 @@
 .ad {
   &--feed,
-  &--feed .yandex-adaptive {
+  &--feed {
     box-shadow: 1px 1px 5px #ccc;
     border-radius: 4px;
     overflow: hidden;
@@ -10,6 +10,12 @@
     width: 380px;
     margin: .5rem;
     min-width: 300px;
+
+    & .yandex-adaptive {
+      max-height: 400px;
+      width: 380px;
+      max-width: 300px;
+    }
 
     & img {
       @include absoluteCenter;
@@ -28,14 +34,24 @@
     @include respond(tab-land) {
       width: 350px;
       margin: .5rem;
+
+      & .yandex-adaptive {
+        max-width: 350px;
+      }
     }
     @include respond(tab-port) {
       width: 500px;
+      & .yandex-adaptive {
+        max-width: 500px;
+      }
       margin: .5rem 0;
     }
     @include respond(phone) {
       margin-bottom: .5em;
       width: 100%;
+      & .yandex-adaptive {
+        width: 100%;
+      }
     }
 
     &:hover {
@@ -84,20 +100,21 @@
   }
 
   &--top,
-  &--bottom,
-  &--top .yandex-adaptive,
-  &--bottom .yandex-adaptive {
+  &--bottom {
     min-width: 300px;
     width: 680px;
     box-shadow: 1px 1px 5px #ccc;
+
+    & .yandex-adaptive {
+      min-width: 300px;
+      width: 680px;
+      max-width: 680px;
+    }
   }
 
   &--top,
   &--bottom,
-  &--post-body,
-  &--top .yandex-adaptive,
-  &--bottom .yandex-adaptive,
-  &--post-body .yandex-adaptive {
+  &--post-body, {
     min-width: 300px;
     min-height: 200px;
     margin: 3rem auto;
@@ -105,6 +122,11 @@
     text-align: center;
     position: relative;
     box-shadow: 1px 1px 5px #ccc;
+
+    & .yandex-adaptive {
+      min-width: 300px;
+      min-height: 200px;
+    }
 
     & img {
       text-align: center;
@@ -118,11 +140,6 @@
       }
       & .yandex-adaptive {
         width: 100%;
-        margin: 2rem auto;
-
-        &::before {
-          font-size: 2rem;
-        }
       }
     }
 
