@@ -5,20 +5,20 @@
       <div id="yandex_rtb_R-A-568097-1"></div>
       <script2 type="text/javascript">
         (function(w, d, n, s, t) {
-          w[n] = w[n] || [];
-          w[n].push(function() {
-            Ya.Context.AdvManager.render({
-              blockId: "R-A-568097-1",
-              renderTo: "yandex_rtb_R-A-568097-1",
-              async: true
-            });
-          });
-          t = d.getElementsByTagName("script")[0];
-          s = d.createElement("script");
-          s.type = "text/javascript";
-          s.src = "//an.yandex.ru/system/context.js";
-          s.async = true;
-          t.parentNode.insertBefore(s, t);
+        w[n] = w[n] || [];
+        w[n].push(function() {
+        Ya.Context.AdvManager.render({
+        blockId: "R-A-568097-1",
+        renderTo: "yandex_rtb_R-A-568097-1",
+        async: true
+        });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
       </script2>
     </div>
@@ -34,24 +34,24 @@
         </article>
         <aside class="aside post__aside">
           <div class="post__ad-1-3 ad--side yad">
-            <!-- Yandex.RTB R-A-568097-1 -->
-            <div id="yandex_rtb_R-A-568097-1"></div>
+            <!-- Yandex.RTB R-A-568097-2 -->
+            <div id="yandex_rtb_R-A-568097-2"></div>
             <script2 type="text/javascript">
               (function(w, d, n, s, t) {
-                w[n] = w[n] || [];
-                w[n].push(function() {
-                  Ya.Context.AdvManager.render({
-                    blockId: "R-A-568097-1",
-                    renderTo: "yandex_rtb_R-A-568097-1",
-                    async: true
-                  });
-                });
-                t = d.getElementsByTagName("script")[0];
-                s = d.createElement("script");
-                s.type = "text/javascript";
-                s.src = "//an.yandex.ru/system/context.js";
-                s.async = true;
-                t.parentNode.insertBefore(s, t);
+              w[n] = w[n] || [];
+              w[n].push(function() {
+              Ya.Context.AdvManager.render({
+              blockId: "R-A-568097-2",
+              renderTo: "yandex_rtb_R-A-568097-2",
+              async: true
+              });
+              });
+              t = d.getElementsByTagName("script")[0];
+              s = d.createElement("script");
+              s.type = "text/javascript";
+              s.src = "//an.yandex.ru/system/context.js";
+              s.async = true;
+              t.parentNode.insertBefore(s, t);
               })(this, this.document, "yandexContextAsyncCallbacks");
             </script2>
           </div>
@@ -59,23 +59,24 @@
       </div>
     </section>
     <div class="ad--bottom">
-      <div id="yandex_rtb_R-A-321666-4"></div>
+      <!-- Yandex.RTB R-A-568097-2 -->
+      <div id="yandex_rtb_R-A-568097-2"></div>
       <script2 type="text/javascript">
         (function(w, d, n, s, t) {
-        w[n] = w[n] || [];
-        w[n].push(function() {
-        Ya.Context.AdvManager.render({
-        blockId: "R-A-321666-4",
-        renderTo: "yandex_rtb_R-A-321666-4",
-        async: true
-        });
-        });
-        t = d.getElementsByTagName("script")[0];
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.src = "//an.yandex.ru/system/context.js";
-        s.async = true;
-        t.parentNode.insertBefore(s, t);
+          w[n] = w[n] || [];
+          w[n].push(function() {
+            Ya.Context.AdvManager.render({
+              blockId: "R-A-568097-2",
+              renderTo: "yandex_rtb_R-A-568097-2",
+              async: true
+            });
+          });
+          t = d.getElementsByTagName("script")[0];
+          s = d.createElement("script");
+          s.type = "text/javascript";
+          s.src = "//an.yandex.ru/system/context.js";
+          s.async = true;
+          t.parentNode.insertBefore(s, t);
         })(this, this.document, "yandexContextAsyncCallbacks");
       </script2>
     </div>
@@ -134,23 +135,24 @@
         const ad = document.createElement('script')
         ad.type = 'text/javascript'
         ad.innerHTML = `
-              (function(w, d, n, s, t) {
-              w[n] = w[n] || [];
-              w[n].push(function() {
-                Ya.Context.AdvManager.render({
-                  blockId: "R-A-568097-1",
-                  renderTo: "yandex_rtb_R-A-568097-1",
-                  async: true
-                });
-              });
-              t = d.getElementsByTagName("script")[0];
-              s = d.createElement("script");
-              s.type = "text/javascript";
-              s.src = "//an.yandex.ru/system/context.js";
-              s.async = true;
-              t.parentNode.insertBefore(s, t);
-            })(this, this.document, "yandexContextAsyncCallbacks");`
-        adId.id = 'yandex_rtb_R-A-568097-1'
+          (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-568097-2",
+                renderTo: "yandex_rtb_R-A-568097-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");`
+
+        adId.id = 'yandex_rtb_R-A-568097-2'
         adBox.appendChild(ad)
         ad.parentNode.insertBefore(adId, ad)
         for (const p in ps) {
