@@ -80,7 +80,7 @@
         w[n] = w[n] || [];
         w[n].push(function() {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-568097-2",
+                blockId: "R-A-568097-${post}",
                 renderTo: "yandex_rtb_R-A-568097-2",
                 async: true,
                 pageNumber: ${post}
