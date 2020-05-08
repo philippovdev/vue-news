@@ -17,7 +17,7 @@
       max-width: 300px;
     }
 
-    & img {
+    &:not(.yandex-adaptive) img {
       @include absoluteCenter;
     }
 
