@@ -1,5 +1,4 @@
 .ad {
-  &--feed,
   &--feed {
     box-shadow: 1px 1px 5px #ccc;
     border-radius: 4px;
@@ -15,10 +14,6 @@
       max-height: 400px;
       width: 380px;
       max-width: 300px;
-    }
-
-    &:not(.yandex-adaptive) img {
-      @include absoluteCenter;
     }
 
     &::after {
