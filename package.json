@@ -13,7 +13,7 @@
   "dependencies": {
     "@naumstory/nuxtjs-yandex-metrika": "^1.0.5",
     "@nuxtjs/axios": "^5.10.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "cssnano": "^4.1.10",
     "express": "^4.17.1",
