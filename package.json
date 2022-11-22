@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.12.2",
+    "nuxt": "^2.15.8",
     "nuxt-sass-resources-loader": "^2.0.5",
     "pm2": "^4.4.0",
     "postcss-hexrgba": "^2.0.0",
