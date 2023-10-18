@@ -2,8 +2,6 @@
 
 > Nuxt.js news aggregator
 
-## Live Here ->> [LOVA News](https://lova.news)
-
 ## Build Setup
 
 ``` bash
